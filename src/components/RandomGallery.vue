@@ -1,7 +1,6 @@
 <template>
-  <div class="container">
+  <div class="grid-container">
     <div class="grid">
-
       <div class="grid-item" v-for="(id, $index) in list" :key="$index">
         <div class="grid-item-wrapper">
           <div class="grid-item-container">
@@ -10,11 +9,13 @@
         </div>
       </div>
     </div>
-    <infinite-loading @infinite="infiniteHandler">
-      <div slot="spinner">Loading...</div>
-      <div slot="no-more">No more images</div>
-      <div slot="no-results">No more results</div>
-    </infinite-loading>
+    <div class="loader">
+      <infinite-loading @infinite="infiniteHandler">
+        <div slot="spinner">Loading...</div>
+        <div slot="no-more">No more images</div>
+        <div slot="no-results">No more results</div>
+      </infinite-loading>
+    </div>
   </div>
 </template>
 
@@ -49,7 +50,6 @@ export default {
   // /getRandomizedIdArray(min, max)
   methods: {
     infiniteHandler($state) {
-      console.log('Loading...');
       let data = this.randomIds.splice(0, this.pageSize);
       if (data.length) {
         this.page += 1;
@@ -93,15 +93,16 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.container {
-  margin: 0 auto;
+.loader {
+  margin-top: 200px;
 }
 
 .grid {
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
-  min-height: 100%;
+  min-height: 800px;
+  width: 100%;
 }
 
 .grid-item {
