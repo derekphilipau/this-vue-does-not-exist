@@ -36,6 +36,7 @@
 //import Vue from 'vue'
 import InfiniteLoading from 'vue-infinite-loading';
 import galleryMixin from '../galleryMixin';
+import { clearInterval } from 'timers';
 
 export default {
   name: 'RandomGallery',
@@ -56,7 +57,8 @@ export default {
       pad: '',
       modalImageUrl: '',
       initialPageSize: 100,
-      canInfiniteScroll: false
+      canInfiniteScroll: false,
+      scrollIntervalId: null
     };
   },
   components: {
@@ -65,15 +67,28 @@ export default {
   mounted() {
     this.pad = this.pad.padStart(this.idLength, '0');
     this.init();
-    this.setCanInfiniteScroll();
+    setTimeout(() => this.canInfiniteScroll = true, 2000);
+    // Page Scroll not working very well...
+    //setTimeout(this.startPageScroll, 2000);
+  },
+  destroyed() {
+      if (this.scrollIntervalId) {
+        clearInterval(this.scrollIntervalId);
+        this.scrollIntervalId = null;
+      }
   },
   methods: {
     init() {
+      if (this.scrollIntervalId) {
+        clearInterval(this.scrollIntervalId);
+        this.scrollIntervalId = null;
+      }
       this.randomIds = this.getRandomizedIdArray(this.minId, this.maxId, this.idLength);
       let ids = this.randomIds.splice(0, this.initialPageSize);
       if (ids.length) {
         this.list.push(...ids);
       }
+      window.scrollTo(0,0);
     },
     infiniteHandler($state) {
       if (this.canInfiniteScroll) {
@@ -90,20 +105,14 @@ export default {
     showImageModal(id) {
       this.modalImageUrl = this.getImageUrl(id, this.imgBaseUrl, this.fileExtension);
     },
-    setCanInfiniteScroll() {
-      // https://stackoverflow.com/questions/40251873/wait-at-least-2-seconds-if-ajax-completed-before-transition-next-with-vue-js
-      // Create a new Promise and resolve after 2 seconds
-      new Promise((resolve) => {
-          setTimeout(resolve, 2000);  // "resolve" is already a function, no need for another anonymous function here
-      });
-      // and do the other stuff here...
-      this.canInfiniteScroll = true;
-    },
     reload() {
       this.canInfiniteScroll = false;
       this.list = [];
       this.init();
-      this.setCanInfiniteScroll();
+      setTimeout(() => this.canInfiniteScroll = true, 2000);
+    },
+    startPageScroll() {
+      this.scrollIntervalId = setInterval(function() { window.scrollBy(0,1); }, 50);
     }
   },
 }
