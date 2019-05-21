@@ -1,9 +1,14 @@
 <template>
-  <div class="random-image">
+  <div class="random-image" v-if="randomId">
     <div class="columns random-image-columns is-vcentered">
       <div class="column is-half is-offset-one-quarter">
         <img class="grid-img" :src="getRandomImage()" />
       </div>
+    </div>
+    <div class="refresh-me">
+      <a @click="reload()">
+        <img src="/img/icon/refresh.svg" width="32" height="32" />
+      </a>
     </div>
   </div>
 </template>
@@ -25,17 +30,22 @@ export default {
       idLength: 7,
       minId: 1,
       maxId: 38196,
-      pageSize: 20
+      pageSize: 20,
+      randomId: null
     };
   },
   components: {
   },
   mounted() {
     this.pad = this.pad.padStart(this.idLength, '0');
+    this.randomId = this.getId(this.getRandom(this.minId, this.maxId), this.idLength);
   },
   methods: {
     getRandomImage() {
-      return this.getImageUrl(this.getId(this.getRandom(this.minId, this.maxId), this.idLength), this.imgBaseUrl, this.fileExtension);
+      return this.getImageUrl(this.randomId, this.imgBaseUrl, this.fileExtension);
+    },
+    reload() {
+      this.randomId = this.getId(this.getRandom(this.minId, this.maxId), this.idLength);
     }
   }
 }

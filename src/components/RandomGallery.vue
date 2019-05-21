@@ -8,12 +8,17 @@
         </figure>
       </div>
     </div>
-    <div class="loader">
-      <infinite-loading @infinite="infiniteHandler">
+    <div class="randomloader">
+      <infinite-loading spinner="circles" @infinite="infiniteHandler">
         <div slot="spinner">Loading...</div>
-        <div slot="no-more">No more images</div>
-        <div slot="no-results">No more results</div>
+        <div slot="no-more">No more images.</div>
+        <div slot="no-results">No more images.</div>
       </infinite-loading>
+    </div>
+    <div class="refresh-me">
+      <a @click="reload()">
+        <img src="/img/icon/refresh.svg" width="32" height="32" />
+      </a>
     </div>
     <div class="modal" v-bind:class="modalImageUrl ? 'is-active' : ''">
       <div class="modal-background" @click="modalImageUrl = ''"></div>
@@ -59,14 +64,17 @@ export default {
   },
   mounted() {
     this.pad = this.pad.padStart(this.idLength, '0');
-    this.randomIds = this.getRandomizedIdArray(this.minId, this.maxId, this.idLength);
-    let ids = this.randomIds.splice(0, this.initialPageSize);
-    if (ids.length) {
-      this.list.push(...ids);
-    }
+    this.init();
     this.setCanInfiniteScroll();
   },
   methods: {
+    init() {
+      this.randomIds = this.getRandomizedIdArray(this.minId, this.maxId, this.idLength);
+      let ids = this.randomIds.splice(0, this.initialPageSize);
+      if (ids.length) {
+        this.list.push(...ids);
+      }
+    },
     infiniteHandler($state) {
       if (this.canInfiniteScroll) {
         let ids = this.randomIds.splice(0, this.pageSize);
@@ -90,12 +98,18 @@ export default {
       });
       // and do the other stuff here...
       this.canInfiniteScroll = true;
+    },
+    reload() {
+      this.canInfiniteScroll = false;
+      this.list = [];
+      this.init();
+      this.setCanInfiniteScroll();
     }
   },
 }
 </script>
 
-<style scoped>
+<style >
   .gallery-columns {
     margin: 0;
     padding: 0;
@@ -107,5 +121,9 @@ export default {
   }
   .gallery-column:hover  {
     filter: brightness(75%);
+  }
+  .infinite-loading-container .infinite-status-prompt {
+    margin: 40px 0;
+    font-size: 20px;
   }
 </style>

@@ -5,7 +5,7 @@
       imgBaseUrl='http://thisvesseldoesnotexist.s3-website-us-west-2.amazonaws.com/public/fakes/'
       :idLength=7
       :minId=1
-      :maxId=100000
+      :maxId=100
       :pageSize=20 
       />
   </div>
