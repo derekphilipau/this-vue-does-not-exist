@@ -69,6 +69,6 @@ export default {
 
 <style lang="scss">
 .navbar-brand {
-    font-size: 24px;
+    font-size: 20px;
 }
 </style>
