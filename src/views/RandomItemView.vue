@@ -1,6 +1,10 @@
 <template>
   <div class="random-image">
-    <img class="grid-img" :src="getRandomImage()" />
+    <div class="columns random-image-columns is-vcentered">
+      <div class="column is-half is-offset-one-quarter">
+        <img class="grid-img" :src="getRandomImage()" />
+      </div>
+    </div>
   </div>
 </template>
 
@@ -36,3 +40,9 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+  .random-image-columns {
+    min-height: 80vh;
+  }
+</style>
