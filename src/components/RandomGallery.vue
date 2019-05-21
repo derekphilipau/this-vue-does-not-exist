@@ -1,10 +1,11 @@
 <template>
   <div class="grid-container">
     <div class="columns gallery-columns is-multiline is-mobile" v-if="this.list">
-      <div class="column gallery-column is-one-fifth-desktop is-one-quarter-tablet is-one-third-mobile" v-for="(id, $index) in list" :key="$index">
-        <a href="#" @click="showImageModal(id)">
+      <div class="column gallery-column is-one-fifth-desktop is-one-quarter-tablet is-one-third-mobile" 
+          v-for="(id, $index) in list" :key="$index">
+        <figure @click="showImageModal(id)" class="image is-square">
           <img class="grid-img" :src="getImageUrl(id, imgBaseUrl, fileExtension)" />
-        </a>
+        </figure>
       </div>
     </div>
     <div class="loader">
