@@ -1,14 +1,10 @@
 <template>
   <div class="grid-container">
-    <div class="grid" v-if="this.list.length">
-      <div class="grid-item" v-for="(id, $index) in list" :key="$index">
-        <div class="grid-item-wrapper">
-          <div class="grid-item-container">
-            <a href="#" @click="showImageModal(id)">
-              <img class="grid-img" :src="getImageUrl(id, imgBaseUrl, fileExtension)" />
-            </a>
-          </div>
-        </div>
+    <div class="columns gallery-columns is-multiline is-mobile" v-if="this.list">
+      <div class="column gallery-column is-one-fifth-desktop is-one-quarter-tablet is-one-third-mobile" v-for="(id, $index) in list" :key="$index">
+        <a href="#" @click="showImageModal(id)">
+          <img class="grid-img" :src="getImageUrl(id, imgBaseUrl, fileExtension)" />
+        </a>
       </div>
     </div>
     <div class="loader">
@@ -31,6 +27,7 @@
 </template>
 
 <script>
+//import Vue from 'vue'
 import InfiniteLoading from 'vue-infinite-loading';
 import galleryMixin from '../galleryMixin';
 
@@ -51,103 +48,63 @@ export default {
       list: [],
       randomIds: [],
       pad: '',
-      modalImageUrl: ''
+      modalImageUrl: '',
+      initialPageSize: 100,
+      canInfiniteScroll: false
     };
   },
   components: {
     InfiniteLoading
   },
   mounted() {
-    this.randomIds = this.getRandomizedIdArray(this.minId, this.maxId, this.idLength);
     this.pad = this.pad.padStart(this.idLength, '0');
+    this.randomIds = this.getRandomizedIdArray(this.minId, this.maxId, this.idLength);
+    let ids = this.randomIds.splice(0, this.initialPageSize);
+    if (ids.length) {
+      this.list.push(...ids);
+    }
+    this.setCanInfiniteScroll();
   },
   methods: {
     infiniteHandler($state) {
-      let data = this.randomIds.splice(0, this.pageSize);
-      if (data.length) {
-        this.page += 1;
-        this.list.push(...data);
-        $state.loaded();
-      } else {
-        $state.complete();
+      if (this.canInfiniteScroll) {
+        let ids = this.randomIds.splice(0, this.pageSize);
+        if (ids.length) {
+          this.page += 1;
+          this.list.push(...ids);
+          $state.loaded();
+        } else {
+          $state.complete();
+        }
       }
     },
     showImageModal(id) {
       this.modalImageUrl = this.getImageUrl(id, this.imgBaseUrl, this.fileExtension);
+    },
+    setCanInfiniteScroll() {
+      // https://stackoverflow.com/questions/40251873/wait-at-least-2-seconds-if-ajax-completed-before-transition-next-with-vue-js
+      // Create a new Promise and resolve after 2 seconds
+      new Promise((resolve) => {
+          setTimeout(resolve, 2000);  // "resolve" is already a function, no need for another anonymous function here
+      });
+      // and do the other stuff here...
+      this.canInfiniteScroll = true;
     }
   },
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
-
-.grid {
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: flex-start;
-  min-height: 800px;
-  width: 100%;
-}
-
-.grid-item {
-  flex-basis: 10%;
-  -ms-flex: auto;
-  position: relative;
-  box-sizing: border-box;
-}
-
-.grid-row a {
-  text-decoration: none;
-}
-
-.grid-item-wrapper {
-  -webkit-box-sizing: initial;
-  -moz-box-sizing: initial;
-  box-sizing: initial;
-  background: #aaa;
-  margin: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  -webkit-transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-  transition: padding 0.15s cubic-bezier(0.4,0,0.2,1), margin 0.15s cubic-bezier(0.4,0,0.2,1), box-shadow 0.15s cubic-bezier(0.4,0,0.2,1);
-  position: relative;
-}
-
-.grid-item-container {
-  height: 100%;
-  width: 100%;
-  position: relative;
-}
-
-.grid-img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.grid-item:hover .grid-item-wrapper {
-  filter: brightness(50%);
-}
-
-@media(max-width: 1333px) {
-  .grid-item {
-    flex-basis: 20%;
+  .gallery-columns {
+    margin: 0;
+    padding: 0;
   }
-}
-
-@media(max-width: 1073px) {
-   .grid-item {
-    flex-basis: 25%;
+  .gallery-column {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
   }
-}
-
-@media(max-width: 815px) {
-  .grid-item {
-    flex-basis: 33.33%;
+  .gallery-column:hover  {
+    filter: brightness(75%);
   }
-}
-
 </style>

@@ -20,7 +20,7 @@ export default {
       imgBaseUrl: 'http://thisvesseldoesnotexist.s3-website-us-west-2.amazonaws.com/public/originals/',
       idLength: 7,
       minId: 1,
-      maxId: 100000,
+      maxId: 38196,
       pageSize: 20
     };
   },
