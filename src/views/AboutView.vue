@@ -42,6 +42,24 @@
 
     </div>
 
+
+    <h5 class="title is-5">Website</h5>
+    <div class="content">
+      <p>
+        The website itself is a <a href="https://vuejs.org/">Vue.js</a> Single-Page Application (SPA)
+        initialized with 
+        <a href="https://cli.vuejs.org/">Vue CLI</a> using <a href="https://router.vuejs.org/">Vue Router</a>
+        with <a href="https://bulma.io/">Bulma</a> providing a light but fully-functional CSS framework.        
+        The statically-generated site files are hosted on  <a href="https://pages.github.com/">Github Pages</a>.
+      </p>
+      <p>
+        The set of 38200 "Original" images used for training as well as the 100,000 "Fake" generated images are 
+        stored in <a href="https://aws.amazon.com/s3/">Amazon S3 buckets</a> 
+        with filenmaes comprised of zero-padded, consecutive ID's (e.g. "0000001.jpg", "0000002.jpg", "0000003.jpg", etc.).
+        To generate the randomized galleries, 
+        the Vue gallery component simply selects from an array of randomized image ID's.
+      </p>
+    </div>
   </div>
 </template>
 

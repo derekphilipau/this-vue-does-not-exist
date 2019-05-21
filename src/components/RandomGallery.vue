@@ -1,10 +1,12 @@
 <template>
   <div class="grid-container">
-    <div class="grid">
+    <div class="grid" v-if="this.list.length">
       <div class="grid-item" v-for="(id, $index) in list" :key="$index">
         <div class="grid-item-wrapper">
           <div class="grid-item-container">
-            <img class="grid-img" :src="getImageUrl(id, imgBaseUrl, fileExtension)" />
+            <a href="#" @click="showImageModal(id)">
+              <img class="grid-img" :src="getImageUrl(id, imgBaseUrl, fileExtension)" />
+            </a>
           </div>
         </div>
       </div>
@@ -15,6 +17,15 @@
         <div slot="no-more">No more images</div>
         <div slot="no-results">No more results</div>
       </infinite-loading>
+    </div>
+    <div class="modal" v-bind:class="modalImageUrl ? 'is-active' : ''">
+      <div class="modal-background" @click="modalImageUrl = ''"></div>
+      <div class="modal-content">
+        <p class="image">
+          <img :src="modalImageUrl" alt="">
+        </p>
+      </div>
+      <button class="modal-close is-large" aria-label="close" @click="modalImageUrl = ''"></button>
     </div>
   </div>
 </template>
@@ -39,7 +50,8 @@ export default {
       page: 1,
       list: [],
       randomIds: [],
-      pad: ''
+      pad: '',
+      modalImageUrl: ''
     };
   },
   components: {
@@ -59,6 +71,9 @@ export default {
       } else {
         $state.complete();
       }
+    },
+    showImageModal(id) {
+      this.modalImageUrl = this.getImageUrl(id, this.imgBaseUrl, this.fileExtension);
     }
   },
 }

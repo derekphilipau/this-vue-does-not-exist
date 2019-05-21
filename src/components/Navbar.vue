@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar is-transparent is-fixed-top">
+  <nav class="navbar is-transparent is-fixed-top has-shadow">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
         This vessel does not exist.
