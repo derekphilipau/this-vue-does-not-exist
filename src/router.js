@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import OriginalsView from './views/OriginalsView.vue'
 import FakesView from './views/FakesView.vue'
 import About from './views/AboutView.vue'
+import RandomItemView from './views/RandomItemView.vue'
 
 Vue.use(Router)
 
@@ -12,8 +13,8 @@ export default new Router({
     linkExactActiveClass: 'is-active',
     routes: [{
             path: '/',
-            redirect: { name: 'fakes' },
-            name: 'home',
+            component: RandomItemView,
+            name: 'home'
         },
         {
             path: '/originals',

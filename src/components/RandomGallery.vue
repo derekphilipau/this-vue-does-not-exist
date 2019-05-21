@@ -4,7 +4,7 @@
       <div class="grid-item" v-for="(id, $index) in list" :key="$index">
         <div class="grid-item-wrapper">
           <div class="grid-item-container">
-            <img class="grid-img" :src="getImageUrl(id)" />
+            <img class="grid-img" :src="getImageUrl(id, imgBaseUrl, fileExtension)" />
           </div>
         </div>
       </div>
@@ -21,6 +21,7 @@
 
 <script>
 import InfiniteLoading from 'vue-infinite-loading';
+import galleryMixin from '../galleryMixin';
 
 export default {
   name: 'RandomGallery',
@@ -32,6 +33,7 @@ export default {
     pageSize: Number,
     fileExtension: String
   },
+  mixins: [galleryMixin],
   data() {
     return {
       page: 1,
@@ -44,10 +46,9 @@ export default {
     InfiniteLoading
   },
   mounted() {
-    this.randomIds = this.getRandomizedIdArray(this.minId, this.maxId);
+    this.randomIds = this.getRandomizedIdArray(this.minId, this.maxId, this.idLength);
     this.pad = this.pad.padStart(this.idLength, '0');
   },
-  // /getRandomizedIdArray(min, max)
   methods: {
     infiniteHandler($state) {
       let data = this.randomIds.splice(0, this.pageSize);
@@ -58,33 +59,6 @@ export default {
       } else {
         $state.complete();
       }
-    },
-    getRandomizedIdArray(min, max) {
-      let a = [];
-      let len = max - min + 1;
-      for (var i = 0; i < len; ++i) {
-        a[i] = this.getId(min + i);
-      }
-      a = this.shuffle(a);
-      return a;
-    },
-    getId(i) {
-      return (i+'').padStart(this.idLength, '0');
-    },
-    getImageUrl(id) {
-      return this.imgBaseUrl + id + '.' + this.fileExtension;
-    },
-    /**
-     * https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
-     * Shuffles array in place. ES6 version
-     * @param {Array} a items An array containing the items.
-     */
-    shuffle(a) {
-        for (let i = a.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [a[i], a[j]] = [a[j], a[i]];
-        }
-        return a;
     }
   },
 }
@@ -93,9 +67,6 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.loader {
-  margin-top: 200px;
-}
 
 .grid {
   display: flex;

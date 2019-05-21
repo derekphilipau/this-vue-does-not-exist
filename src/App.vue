@@ -1,10 +1,9 @@
 <template>
   <div id="app">
-    <Navbar
-      :isFake=isFake
-      v-on:setIsFake="setIsFake"
-    />
-    <router-view/>
+    <Navbar/>
+    <transition name="fade">
+      <router-view/>
+    </transition>
   </div>
 </template>
 
@@ -48,6 +47,7 @@ $input-shadow: none;
 
 body {
   margin: 0;
+  margin-top: 52px;
   padding: 0;
 }
 </style>

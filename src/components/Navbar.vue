@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar has-shadow is-transparent is-fixed-bottom">
+  <nav class="navbar is-transparent is-fixed-top">
     <div class="navbar-brand">
         <a class="navbar-item" href="/">
         This vessel does not exist.
@@ -49,9 +49,6 @@
 <script>
 export default {
   name: 'RandomGallery',
-  props: {
-    isFake: Boolean
-  },
   data() {
     return {
       isMenuActive: false
@@ -63,9 +60,6 @@ export default {
     }
   },
   methods: {
-    setIsFake(isFake) {
-      this.$emit('setIsFake', isFake);
-    },
     closeMenu() {
       this.isMenuActive = false
     }
