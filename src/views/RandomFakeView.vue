@@ -17,7 +17,7 @@
 import galleryMixin from '../galleryMixin';
 
 export default {
-  name: 'RandomItemView',
+  name: 'RandomFakeView',
   props: {
   },
   mixins: [galleryMixin],
@@ -25,13 +25,13 @@ export default {
     return {
       currentId: null,
       pad: '',
-      fileExtension: 'jpg',
-      imgBaseUrl: 'http://thisvesseldoesnotexist.s3-website-us-west-2.amazonaws.com/public/originals/',
-      idLength: 7,
-      minId: 1,
-      maxId: 38196,
-      pageSize: 20,
-      randomId: null
+      randomId: null,
+      fileExtension: process.env.VUE_APP_FAKES_EXTENSION,
+      imgBaseUrl: process.env.VUE_APP_FAKES_BASE_URL,
+      idLength: process.env.VUE_APP_FAKES_ID_LENGTH,
+      minId: process.env.VUE_APP_FAKES_MIN_ID,
+      maxId: process.env.VUE_APP_FAKES_MAX_ID,
+      pageSize: process.env.VUE_APP_FAKES_PAGE_SIZE
     };
   },
   components: {

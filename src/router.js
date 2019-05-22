@@ -3,7 +3,7 @@ import Router from 'vue-router'
 import OriginalsView from './views/OriginalsView.vue'
 import FakesView from './views/FakesView.vue'
 import About from './views/AboutView.vue'
-import RandomItemView from './views/RandomItemView.vue'
+import RandomFakeView from './views/RandomFakeView.vue'
 
 Vue.use(Router)
 
@@ -13,7 +13,7 @@ export default new Router({
     linkExactActiveClass: 'is-active',
     routes: [{
             path: '/',
-            component: RandomItemView,
+            component: RandomFakeView,
             name: 'home'
         },
         {
