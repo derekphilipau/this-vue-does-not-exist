@@ -166,6 +166,11 @@
           </ul>
         </li>
         <li>
+          Explore Generator "Styles" with filters and develop a tool that allows artists to explore form.
+          For example,  create a Blue & White vase in Glass?  Explore how mixing various materials & 
+          techniques can lead to new creative possibilities.
+        </li>
+        <li>
           Create datasets for other classes of "vessels" other than vases:  cups, bowls, dishes, etc.
         </li>
         <li>
