@@ -34,9 +34,9 @@
             In a very general sense, the role of the Generator is similar to that of 
             the apprentice and the forger,  
             while the Discriminator plays the role of the Master or connoisseur.
-            These two parts are <em>adversarial</em> in nature:  
-            it is the Generator's goal to "trick" the Discriminator into believing an item is authentic, 
-            while the Discriminator attempts to accurately classify whether items are real or fake.
+            In a continuous feedback-loop, the Generator creates "fakes" that will be judged by the Discriminator
+            as being "real" or "fake", and both parts improve as time goes on.  
+            Eventually the Generator becomes a Master and can create the images on this website.
           </p>
         </div>
         <div class="column is-two-fifths">
