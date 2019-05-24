@@ -10,7 +10,7 @@
         artists will have new tools with which to understand their craft and create new work.  
         For those of you who are actually experts in 
         the fields of AI and ML, I apologize in advance for poor generalizations and oversimplifications,
-        and I hope that you will notify me of any mistakes.
+        and I hope that you will notify me of any mistakes.  -<a href="http://derekau.net">Derek</a>
         </em>
       </p>
     </div>

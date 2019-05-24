@@ -26,6 +26,9 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Lora');
 
 // Set your brand colors
+$my-blue: #326891;
+$link: $my-blue;
+/*
 $purple: #8A4D76;
 $pink: #FA7C91;
 $brown: #757763;
@@ -33,7 +36,6 @@ $beige-light: #D0D1CD;
 $beige-lighter: #EFF0EB;
 
 // Update Bulma's global variables
-$family-sans-serif: "Lora", sans-serif;
 $grey-dark: $brown;
 $grey-light: $beige-light;
 $primary: $purple;
@@ -44,7 +46,9 @@ $control-border-width: 2px;
 $input-background-color: $beige-lighter;
 $input-border-color: transparent;
 $input-shadow: none;
+*/
 
+$family-sans-serif: "Lora", sans-serif;
 $navbar-breakpoint: $tablet;
 
 // Import the rest of Bulma
@@ -81,4 +85,9 @@ body {
 .content figure pre {
   text-align: left !important;
 }
+
+.content a {
+  text-decoration: underline;
+}
+
 </style>
