@@ -3,6 +3,19 @@
     <h1 class="title is-1">This vessel does not exist.</h1>
 
     <div class="content">
+      <p>
+        <em>
+        Note: I am by no means a machine-learning expert.
+        As extremely powerful ML tools like StyleGAN are released and become more user-friendly,
+        artists will have new tools with which to understand their craft and create new work.  
+        For those of you who are actually experts in 
+        the fields of AI and ML, I apologize in advance for poor generalizations and oversimplifications,
+        and I hope that you will notify me of any mistakes.
+        </em>
+      </p>
+    </div>
+
+    <div class="content">
       <div class="columns">
         <div class="column">
           <p>
@@ -50,40 +63,8 @@
       </div>
     </div>
 
-    <h3 class="title is-3">Donate!</h3>
-    <div class="content">
-      <p>
-        Creating the datasets and running the servers for this project costs wweeks of time and hundreds of dollars in server fees.
-        Further exploration (see "Next Steps") will require even more investment.
-        To continue supporting this website as well as my other projects like
-        <a href="https://glazy.org">Glazy</a>, the <a href="https://wiki.glazy.org">GLazy Wiki</a>, <a href="http://72hands.org/">72 Hands</a>, and others, 
-        please consider donating via
-        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
-            Paypal
-        </a>
-        or
-        <a href="https://www.patreon.com/bePatron?u=5941215">
-            Patreon.
-        </a>
-      </p>
-      <p>
-        <a class="donation-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
-          <img src="/img/icon/PaypalBig.png" width="145" height="44"/>
-        </a>
-        <a href="https://www.patreon.com/bePatron?u=5941215">
-          <img src="/img/icon/PatreonBig.png" width="187" height="44"/>
-        </a>
-      </p>
-    </div>
-
     <h3 class="title is-3">Machine Learning & GANs</h3>
     <div class="content">
-      <p>
-        As Machine Learning becomes more mainstream and ML tools more common and user-friendly,
-        artists will have new tools with which to understand their craft and create new work.
-        This project did not require a deep understanding of ML or GANs,
-        just basic programming skills and patience.
-      </p>
       <p>
         <a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA">Computerphile</a> 
         has a high-level overview of <a href="https://www.youtube.com/watch?v=Sw9r8CL98N0">Generative Adversarial Networks (GANs) here</a>.
@@ -97,23 +78,6 @@
         <a href="https://www.youtube.com/watch?v=kSLJriaOumA">video</a>, 
         <a href="https://github.com/NVlabs/stylegan">source</a>), 
         and explains in detail the procedure to install and run the <a href="https://github.com/NVlabs/stylegan/">StyleGAN</a> software.
-      </p>
-      <p>
-        Approximately 40,000 large images of "vases" were downloaded from the web.  
-        Rather than relying on a search engine like <a href="https://www.google.com/imghp?hl=en">Google Images</a> to procure the dataset, 
-        I 
-      </p>
-    </div>
-
-    <h3 class="title is-3">Methodology</h3>
-    <div class="content">
-      <p>
-        <em>
-        I want to preface the following by noting that I am by no means a machine-learning expert.
-        As extremely powerful ML tools like StyleGAN are released and become easier to use,
-        relative noobs such as myself can apply them to new areas of research, hopefully leading
-        to new ways to view and understand our world.
-        </em>
       </p>
     </div>
 
@@ -130,6 +94,10 @@
         Including all types  of "vessels"- cups, bowls, dishes, etc.- would have resutled in 
         far too much variation, especially if I wanted to keep the dataset less than a few
         tens of thousands of images in size.
+        Vases also have an advantage in that they are usually photographed 
+        from the same angle (from the front and slightly elevated).
+      </p>
+      <p>
         Having said that, there is a <em>huge</em> amount of variation even within vases.
         I could have limited the dataset even further by including only <em>ceramic</em>
         vases, however I'm very interested in seeing the cross-pollination between vases 
@@ -160,10 +128,6 @@
           </figure>
         </div>
       </div>
-      <p>  
-        Vases also have an advantage in that they are usually photographed 
-        from the same angle (from the front and slightly elevated).
-      </p>
       <p>
         I was worried of having too small of a dataset and the possibility that the StyleGAN
         software might just end up memorizing the whole thing.  
@@ -185,9 +149,9 @@
         </ul>
       </p>
       <p>
-        Using Flickr as a source had the same issues.  
+        Using Flickr as a source had the same issues and Google Images.  
         So instead I focused on museums and auction houses, where I could download enter
-        image sets for "vases" and be assured of high-quality images shot against a simple white-grey gradient background.
+        image sets for "vases" and be assured of high-quality images shot against a simple backgrounds.
         Because each site is quite different, 
         I restored to a variety of scraping tools, from home-grown shell and PHP scripts to more
         powerful tools like <a href="https://scrapy.org/">Scrapy</a>.
@@ -335,6 +299,33 @@ done &lt; $filename</code>
         </li>
       </ul>
     </div>
+
+    <h3 class="title is-3">Donate!</h3>
+    <div class="content">
+      <p>
+        Creating the datasets and running the servers for this project costs weeks of time and hundreds of dollars in server fees.
+        Further exploration (see "Next Steps") will require even more investment.
+        To continue supporting this website as well as my other projects like
+        <a href="https://glazy.org">Glazy</a>, the <a href="https://wiki.glazy.org">GLazy Wiki</a>, <a href="http://72hands.org/">72 Hands</a>, and others, 
+        please consider donating via
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
+            Paypal
+        </a>
+        or
+        <a href="https://www.patreon.com/bePatron?u=5941215">
+            Patreon.
+        </a>
+      </p>
+      <p>
+        <a class="donation-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
+          <img src="/img/icon/PaypalBig.png" width="145" height="44"/>
+        </a>
+        <a href="https://www.patreon.com/bePatron?u=5941215">
+          <img src="/img/icon/PatreonBig.png" width="187" height="44"/>
+        </a>
+      </p>
+    </div>
+
   </div>
 </template>
 
