@@ -53,7 +53,7 @@
     <h3 class="title is-3">Donate!</h3>
     <div class="content">
       <p>
-        Creating the datasets and running the servers for this project costs weeks of time and hundreds of dollars in server fees.
+        Creating the datasets and running the servers for this project costs wweeks of time and hundreds of dollars in server fees.
         Further exploration (see "Next Steps") will require even more investment.
         To continue supporting this website as well as my other projects like
         <a href="https://glazy.org">Glazy</a>, the <a href="https://wiki.glazy.org">GLazy Wiki</a>, <a href="http://72hands.org/">72 Hands</a>, and others, 
@@ -106,7 +106,18 @@
     </div>
 
     <h3 class="title is-3">Methodology</h3>
-    <h5 class="title is-5">Choosing a dataset</h5>
+    <div class="content">
+      <p>
+        <em>
+        I want to preface the following by noting that I am by no means a machine-learning expert.
+        As extremely powerful ML tools like StyleGAN are released and become easier to use,
+        relative noobs such as myself can apply them to new areas of research, hopefully leading
+        to new ways to view and understand our world.
+        </em>
+      </p>
+    </div>
+
+    <h5 class="title is-5">Creating a dataset</h5>
     <div class="content">
       <p>
         <a href="https://github.com/NVlabs/stylegan/">StyleGAN</a> requires relatively large datasets of images.
@@ -115,7 +126,89 @@
         <a href="https://github.com/NVlabs/ffhq-dataset">high-quality images of human faces</a>.)
       </p>
       <p>
-        (Possibility of memorization with small datasets.)
+        I focused on a single form, the <em>"vase"</em>, in order to keep the dataset relatively simple.
+        Including all types  of "vessels"- cups, bowls, dishes, etc.- would have resutled in 
+        far too much variation, especially if I wanted to keep the dataset less than a few
+        tens of thousands of images in size.
+        Having said that, there is a <em>huge</em> amount of variation even within vases.
+        I could have limited the dataset even further by including only <em>ceramic</em>
+        vases, however I'm very interested in seeing the cross-pollination between vases 
+        of different materials- porcelain, glass, wood, metal, etc.
+        (For an excellent example of the influence of various craft traditions upon one another, see the
+        <a href="http://www.sothebys.com/en/auctions/2008/masterpieces-of-chinese-precious-metalwork-early-gold-and-silver-early-chinese-white-green-and-black-wares-l08211.html">Masterpieces of Chinese Precious Metalwork, Early Gold and Silver; Early Chinese White, Green and Black Wares</a>
+        auction from Sotheby's.)
+      </p>
+      <div class="columns">
+        <div class="column">
+          <figure class="image">
+            <img src="/img/sothebys1.jpg" alt="">
+            <figcaption>
+              <a href="http://www.sothebys.com/en/auctions/ecatalogue/2008/masterpieces-of-chinese-precious-metalwork-early-gold-and-silver-early-chinese-white-green-and-black-wares-l08211/lot.53.html">
+                A FINE SMALL PARCEL-GILT SILVER BOWL
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="/img/sothebys2.jpg" alt="">
+            <figcaption>
+              <a href="http://www.sothebys.com/en/auctions/ecatalogue/2008/masterpieces-of-chinese-precious-metalwork-early-gold-and-silver-early-chinese-white-green-and-black-wares-l08211/lot.220.html">
+                A WHITE STONEWARE PRUNUS-FLOWER BOWL TANG/FIVE DYNASTIES
+              </a>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+      <p>  
+        Vases also have an advantage in that they are usually photographed 
+        from the same angle (from the front and slightly elevated).
+      </p>
+      <p>
+        I was worried of having too small of a dataset and the possibility that the StyleGAN
+        software might just end up memorizing the whole thing.  
+        So I ended up scraping a variety of websites until I had around 50k images.
+        I bypassed Google Images for a number of reasons: 
+        <ul>
+          <li>
+        images of "vases" are too varied, many are filled with flowers or have complicated backgrounds,
+          </li>
+          <li>
+        <a href="https://github.com/hardikvasa/google-images-download">google-images-download</a>
+        (the only reliable downloader I could find) only seems to be able to download 600 images per query,
+        and breaks down after the first 100 when doing more complicated domain-based searches,
+          </li>
+          <li>
+        I couldn't guarantee I wasn't just downloading a lot of duplicate images on each 
+        variation of my search parameters.
+          </li>
+        </ul>
+      </p>
+      <p>
+        Using Flickr as a source had the same issues.  
+        So instead I focused on museums and auction houses, where I could download enter
+        image sets for "vases" and be assured of high-quality images shot against a simple white-grey gradient background.
+        Because each site is quite different, 
+        I restored to a variety of scraping tools, from home-grown shell and PHP scripts to more
+        powerful tools like <a href="https://scrapy.org/">Scrapy</a>.
+        The output of all of my scripts is simply dumping image URL's to text files.
+        Then, a set of shell scripts iterates through each URL:
+      </p>
+      <ol>
+        <li>
+          Download the image file with wget to a local file with a unique filename.
+        </li>
+        <li>
+          Use ImageMagick convert to resize the image dimensions, DPI, colorspace, quality, etc.
+        </li>
+        <li>
+          Store a record associating the filename with the URL in a log file.
+        </li>
+      </ol>
+      <p>
+        These sets of images were then manually reviewed, and I tried to clean up the data as best as
+        possible.  About 25% of the images were removed for being unrelated (shards, paintings of vases, etc.),
+        poor quality, bad angle, etc.
       </p>
       <p>
         The "Originals" dataset of photos come from a variety of museum and auction house websites including:
@@ -139,6 +232,12 @@
         <a href="https://www.sothebys.com/en/">Sotheby's</a>,
         <a href="https://www.vam.ac.uk/">Victoria and Albert Museum</a>, and
         <a href="https://www.woolleyandwallis.co.uk/">Woolley & Wallis</a>.
+      </p>
+    </div>
+
+    <h5 class="title is-5">Creating the Dataset</h5>
+    <div class="content">
+      <p>
       </p>
     </div>
 
