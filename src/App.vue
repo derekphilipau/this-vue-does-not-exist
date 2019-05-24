@@ -77,4 +77,8 @@ body {
   opacity: 1;
   background-color: transparent;
 }
+
+.content figure pre {
+  text-align: left !important;
+}
 </style>

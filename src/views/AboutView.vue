@@ -50,6 +50,32 @@
       </div>
     </div>
 
+    <h3 class="title is-3">Donate!</h3>
+    <div class="content">
+      <p>
+        Creating the datasets and running the servers for this project costs weeks of time and hundreds of dollars in server fees.
+        Further exploration (see "Next Steps") will require even more investment.
+        To continue supporting this website as well as my other projects like
+        <a href="https://glazy.org">Glazy</a>, the <a href="https://wiki.glazy.org">GLazy Wiki</a>, <a href="http://72hands.org/">72 Hands</a>, and others, 
+        please consider donating via
+        <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
+            Paypal
+        </a>
+        or
+        <a href="https://www.patreon.com/bePatron?u=5941215">
+            Patreon.
+        </a>
+      </p>
+      <p>
+        <a class="donation-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
+          <img src="/img/icon/PaypalBig.png" width="145" height="44"/>
+        </a>
+        <a href="https://www.patreon.com/bePatron?u=5941215">
+          <img src="/img/icon/PatreonBig.png" width="187" height="44"/>
+        </a>
+      </p>
+    </div>
+
     <h3 class="title is-3">Machine Learning & GANs</h3>
     <div class="content">
       <p>
@@ -87,6 +113,9 @@
         Datasets are usually comprised of images of the same "thing"- human faces, cars, bedrooms, cats, anime characters, etc.
         (The <a href="https://arxiv.org/abs/1812.04948">original Stylegan paper</a> used a dataset of 70,000 
         <a href="https://github.com/NVlabs/ffhq-dataset">high-quality images of human faces</a>.)
+      </p>
+      <p>
+        (Possibility of memorization with small datasets.)
       </p>
       <p>
         The "Originals" dataset of photos come from a variety of museum and auction house websites including:
@@ -146,6 +175,36 @@
         To generate the randomized galleries, 
         the Vue gallery component simply selects from an array of randomized image ID's (from 1 to the maximum).
       </p>
+      <figure class="highlight">
+        <pre>
+<code>#!/bin/bash
+# Download a bunch of images from a file, convert them, and save a log.
+# Input file (first command argument) should have one image URL per line.
+
+timestamp() {
+  date +&quot;%s&quot;
+}
+
+filename=$1
+while read url; do
+  echo $url
+  my_time=$(timestamp)
+  ext=&quot;.jpg&quot;
+  img_filename=&quot;$my_time$ext&quot;
+  echo $img_filename
+  # Download the image file:
+  wget --no-clobber $url --append-output=wgetoutput.log --output-document=$img_filename
+  # Use Image Magick to convert the downloaded file:
+  # * Resize to exact dimensions of 1024 x 1024.
+  # * Fill in unused space with white canvas. 
+  # * Adjust image DPI, colorspace, and quality (can be lower than 90 to save space).
+  convert &quot;./$img_filename&quot; -resize 1024x1024 -gravity center -extent 1024x1024 -background white -density 72 -set colorspace sRGB -quality 90 &quot;./$img_filename&quot;
+  # Make a record tying the downloaded filename to the original URL:
+  echo &quot;$img_filename:$url&quot; &gt;&gt; completed.txt 
+  sleep 1
+done &lt; $filename</code>
+        </pre>
+      </figure>
     </div>
 
     <h5 class="title is-5">Next Steps</h5>
@@ -155,7 +214,7 @@
           Re-scrape images from original dataset, but this time: 
           <ul>
             <li>
-              Use only a white background color instead of trying to match the photo background, and 
+              Use only a white background color instead of trying to match the photo background. 
             </li>
             <li>
               Save metadata information, most importantly the origin URL, 
@@ -168,7 +227,7 @@
         <li>
           Explore Generator "Styles" with filters and develop a tool that allows artists to explore form.
           For example,  create a Blue & White vase in Glass?  Explore how mixing various materials & 
-          techniques can lead to new creative possibilities.
+          techniques can lead to new creative possibilities.  Attempt crossbreeding with different models.
         </li>
         <li>
           Create datasets for other classes of "vessels" other than vases:  cups, bowls, dishes, etc.
@@ -176,9 +235,6 @@
         <li>
         </li>
       </ul>
-      <p>
-        :
-      </p>
     </div>
   </div>
 </template>
@@ -187,5 +243,8 @@
 <style lang="scss">
 .about-container {
   margin: 90px 30px;
+}
+.donation-link {
+  padding-right: 40px;
 }
 </style>
