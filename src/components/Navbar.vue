@@ -37,10 +37,10 @@
             <div class="navbar-item">
                 <div class="field is-grouped">
                     <a class="navbar-item paypal-item" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
-                        Donate: &nbsp;<img src="/img/icon/paypal.png" width="79" height="24" />
+                        Donate: &nbsp;<img src="/img/icon/Paypal.png" width="79" height="24" />
                     </a>
                     <a class="navbar-item patreon-item" href="https://www.patreon.com/bePatron?u=5941215">
-                         <img src="/img/icon/patreon.png" width="25" height="24" />
+                         <img src="/img/icon/Patreon.png" width="25" height="24" />
                     </a>
                 </div>
             </div>

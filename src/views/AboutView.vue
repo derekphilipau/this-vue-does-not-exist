@@ -54,6 +54,12 @@
         </div>
         <div class="column is-two-fifths">
           <figure class="image">
+            <img src="/img/forms3.jpg" alt="From a book of forms. Jingdezhen, China, 2008.">
+            <figcaption>
+              From a book of forms. Jingdezhen, China, 2008.
+            </figcaption>
+          </figure>
+          <figure class="image">
             <img src="/img/fakes.jpg" alt="Imitation qingbai ware. Jingdezhen, China, 2008.">
             <figcaption>
               Imitation qingbai ware. Jingdezhen, China, 2008.
@@ -300,6 +306,47 @@ done &lt; $filename</code>
       </ul>
     </div>
 
+GET HASHES:
+https://github.com/Jetsetter/dhash
+
+#!/usr/bin/python
+import time
+import dhash
+from PIL import Image
+import glob
+
+log = open('jpghashes.txt','w') 
+
+for filepath in glob.iglob('./*.jpg'):
+    image = Image.open(filepath)
+    print(filepath)
+    row, col = dhash.dhash_row_col(image)
+    log.write(dhash.format_hex(row, col) + ':::' + filepath + '\n')
+    print(dhash.format_hex(row, col))
+    #time.sleep(1)
+
+ORDER FILE BY HASH, then RUN:
+
+#!/usr/bin/python
+import time
+import glob
+import os
+import shutil
+
+lasthash = ''
+
+with open('jpghashes.txt.ordered.2') as f:
+    for line in f:
+        line = line.rstrip();
+        hash,file = line.split(':::')
+        justfile = file[2:]
+        #print(hash + ' ' + lasthash)
+        #print('Hash: ' + hash + ' FILE:' + file)
+        if hash == lasthash:
+            print('DUPLICATE: ' + lasthash + ' ' + hash + ' ' + justfile)
+            shutil.move(file, "duplicates/" + justfile)
+        lasthash = hash            
+        #time.sleep(1)
     <h3 class="title is-3">Donate!</h3>
     <div class="content">
       <p>
@@ -317,10 +364,10 @@ done &lt; $filename</code>
         </a>
       </p>
       <p>
-        <a class="donation-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
+        <a class="donation-link paypal-donation-link" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
           <img src="/img/icon/PaypalBig.png" width="145" height="44"/>
         </a>
-        <a href="https://www.patreon.com/bePatron?u=5941215">
+        <a class="donation-link" href="https://www.patreon.com/bePatron?u=5941215">
           <img src="/img/icon/PatreonBig.png" width="187" height="44"/>
         </a>
       </p>
@@ -334,7 +381,10 @@ done &lt; $filename</code>
 .about-container {
   margin: 90px 30px;
 }
-.donation-link {
+.donation-link img:hover {
+  opacity: 0.85;
+}
+.paypal-donation-link {
   padding-right: 40px;
 }
 </style>
