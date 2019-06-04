@@ -23,9 +23,12 @@
     <div class="modal" v-bind:class="modalImageUrl ? 'is-active' : ''">
       <div class="modal-background" @click="modalImageUrl = ''"></div>
       <div class="modal-content">
-        <p class="image">
-          <img :src="modalImageUrl" alt="">
-        </p>
+        <figure class="image">
+          <img :src="modalImageUrl" ref="modalImageRef" v-on:load="modalImageLoaded" alt="">
+          <figcaption v-if="modalImageExternalUrl">
+            <a :href="modalImageExternalUrl">{{ modalImageExternalUrl }}</a>
+          </figcaption>
+        </figure>
       </div>
       <button class="modal-close is-large" aria-label="close" @click="modalImageUrl = ''"></button>
     </div>
@@ -34,6 +37,7 @@
 
 <script>
 //import Vue from 'vue'
+import EXIF from 'exif-js'
 import InfiniteLoading from 'vue-infinite-loading';
 import galleryMixin from '../galleryMixin';
 import { clearInterval } from 'timers';
@@ -56,6 +60,9 @@ export default {
       randomIds: [],
       pad: '',
       modalImageUrl: '',
+      modalImageExternalUrl: '',
+      image: null,
+      imageSourceUrl: null,
       initialPageSize: 100,
       canInfiniteScroll: false,
       scrollIntervalId: null
@@ -104,6 +111,14 @@ export default {
     },
     showImageModal(id) {
       this.modalImageUrl = this.getImageUrl(id, this.imgBaseUrl, this.fileExtension);
+    },
+    modalImageLoaded() {
+      const myThis = this;
+      EXIF.getData(this.$refs.modalImageRef, function() {
+          if (this.iptcdata && 'headline' in this.iptcdata) {
+            myThis.modalImageExternalUrl = this.iptcdata.headline;
+          }
+      });
     },
     reload() {
       this.canInfiniteScroll = false;

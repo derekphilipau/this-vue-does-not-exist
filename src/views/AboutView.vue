@@ -49,7 +49,7 @@
             while the Discriminator plays the role of the Master or connoisseur.
             In a continuous feedback-loop, the Generator creates "fakes" that will be judged by the Discriminator
             as being "real" or "fake", and both parts improve as time goes on.  
-            Eventually the Generator becomes a Master and can create the images on this website.
+            Eventually the Generator becomes a "Master" and can create the images on this website.
           </p>
         </div>
         <div class="column is-two-fifths">
