@@ -6,7 +6,7 @@
       <p>
         <em>
         Note: I am by no means a machine-learning expert.
-        As extremely powerful ML tools like StyleGAN are released and become more user-friendly,
+        As extremely powerful ML software like StyleGAN are released and become more user-friendly,
         artists will have new tools with which to understand their craft and create new work.  
         For those of you who are actually experts in 
         the fields of AI and ML, I apologize in advance for poor generalizations and oversimplifications,
@@ -182,26 +182,39 @@
       </p>
       <p>
         The "Originals" dataset of photos come from a variety of museum and auction house websites including:
+        <a href="https://www.adriansassoon.com/">Adrian Sassoon</a>,
         <a href="https://www.artcurial.com">Artcurial</a>,
         <a href="https://www.artic.edu/">Art Institute of Chicago</a>,
         <a href="https://www.artsy.net/">Artsy</a>,
         <a href="https://www.bonhams.com/">Bonhams</a>,
         <a href="https://britishmuseum.org/">The British Museum</a>,
         <a href="https://www.bukowskis.com/en">Bukowskis</a>,
+        <a href="http://www.cguardian.com">China Guardian</a>,
         <a href="https://www.christies.com/">Christies</a>,
+        <a href="https://www.cmog.org">Corning Museum of Glass</a>,
         <a href="https://www.dma.org/">Dallas Museum of Art</a>,
         <a href="https://www.dorotheum.com/en/">Dorotheum</a>,
+        <a href="http://doyle.com/">Doyle</a>,
+        <a href="http://freemansauction.com/">Freeman's</a>,
         <a href="https://www.freersackler.si.edu/">Freer | Sackler</a>,
+        <a href="https://www.harvardartmuseums.org/">Harvard Art Museums</a>,
         <a href="https://www.hermitagemuseum.org">The State Hermitage Museum</a>,
+        <a href="https://chait.com">I.M. Chait</a>,
+        <a href="https://www.lyonandturnbull.com/">Lyon and Turnbull</a>,
+        <a href="https://www.maaklondon.com/">Maak London</a>,
         <a href="https://www.mak.at/en">MAK Vienna</a>,
+        <a href="https://www.mfa.org/">Boston Museum of Fine Arts</a>,
         <a href="https://www.metmuseum.org/">The Metropolitan Museum of Art</a>,
         <a href="https://artsmia.org/">Minneapolis Institute of Art</a>,
         <a href="https://philamuseum.org/">Philadelphia Museum of Art</a>,
+        <a href="https://www.phillips.com/">Phillips</a>,
+        <a href="https://www.polyauction.com.hk/en/">Poly Auction</a>,
         <a href="https://www.rijksmuseum.nl/en">Rijksmuseum</a>,
         <a href="https://www.si.edu">The Smithsonian</a>,
         <a href="https://www.sothebys.com/en/">Sotheby's</a>,
-        <a href="https://www.vam.ac.uk/">Victoria and Albert Museum</a>, and
-        <a href="https://www.woolleyandwallis.co.uk/">Woolley & Wallis</a>.
+        <a href="https://www.vam.ac.uk/">Victoria and Albert Museum</a>,
+        <a href="https://www.woolleyandwallis.co.uk/">Woolley & Wallis</a>, and 
+        <a href="https://www.wright20.com/">Wright</a>.
       </p>
     </div>
 
