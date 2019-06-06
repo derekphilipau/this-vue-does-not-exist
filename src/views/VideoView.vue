@@ -1,32 +1,32 @@
 <template>
   <div class="random-image" v-if="randomId">
-    <div class="columns random-image-columns is-vcentered is-multiline">
-      <div class="column is-one-third-widescreen is-half-desktop is-half-tablet">
+    <div class="columns gallery-columns is-vcentered is-multiline">
+      <div class="column gallery-column is-one-third-widescreen is-half-desktop is-half-tablet">
         <video autoplay loop muted playsinline>
           <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/videos/1024_random_204.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="column is-one-third-widescreen is-half-desktop is-half-tablet">
+      <div class="column gallery-column is-one-third-widescreen is-half-desktop is-half-tablet">
         <video autoplay loop muted playsinline>
           <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/videos/1024_random_291.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="column is-one-third-widescreen is-half-desktop is-half-tablet">
+      <div class="column gallery-column is-one-third-widescreen is-half-desktop is-half-tablet">
         <video autoplay loop muted playsinline>
           <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/videos/1024_random_293.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="column is-one-third-widescreen is-half-desktop is-half-tablet">
+      <div class="column gallery-column is-one-third-widescreen is-half-desktop is-half-tablet">
         <video autoplay loop muted playsinline>
           <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/videos/1024_random_370.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="column is-one-third-widescreen is-half-desktop is-half-tablet">
+      <div class="column gallery-column is-one-third-widescreen is-half-desktop is-half-tablet">
         <video autoplay loop muted playsinline>
           <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/videos/1024_random_466.mp4" type="video/mp4">
         </video>
       </div>
-      <div class="column is-one-third-widescreen is-half-desktop is-half-tablet">
+      <div class="column gallery-column is-one-third-widescreen is-half-desktop is-half-tablet">
         <video autoplay loop muted playsinline>
           <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/videos/1024_random_508.mp4" type="video/mp4">
         </video>
@@ -73,7 +73,13 @@ export default {
 </script>
 
 <style scoped>
-  .random-image-columns {
-    min-height: 80vh;
+  .gallery-columns {
+    margin: 0;
+    padding: 0;
+  }
+  .gallery-column {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
   }
 </style>
