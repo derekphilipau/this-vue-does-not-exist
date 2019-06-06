@@ -271,6 +271,15 @@
     <h5 class="title is-5">Running StyleGAN</h5>
     <div class="content">
       <p>
+        I ended up running StylGAN multiple times- first at 512x512px 
+        just to test the system, then at 1024x1024px.  
+        As noted in gwern's guide, perhaps the most important and time-consuming part of the
+        process is obtaining a large, high-quality, clean dataset.  Due to various issues and 
+        overlooked complications with the data, I ended up having to completely re-run the
+        1024px model after manually combing through the images and removing as much junk as 
+        I could.
+      </p>
+      <p>
         I initially ran StyleGAN on an 8 vCPU, 30GB RAM
         <a href="https://jupyter.org/">Jupyter Notebook</a> (CUDA 10.0)
         instance 
@@ -287,6 +296,53 @@
         <a href="https://www.gwern.net/Faces">Making Anime Faces With StyleGAN</a>,
         I needed to upgrade Python to version 3.6.x (required for StyleGAN).
       </p>
+      <p>
+        As discussed in the post <a href="https://www.chrisplaysgames.com/gadgets/2019/02/26/training-at-home-and-in-the-cloud/">Training at Home, and in the Cloud</a>,
+        training a StyleGAN model from scratch is time-consuming and expensive.
+        Once I reached 9000 iterations, I was reaching my budget limit and still needed 
+        enough computation time to generate samples.
+        Also, from 8500-9000 iterations I noticed that progress had drastically slowed,
+        and I was getting the "elephant wrinkles" that gwern describes.  Rather than 
+        keep going, I hope to acquire a larger, cleaner dataset at a later date and try again.      
+      </p>
+      <p>
+        For those of you who want to try generating samples or transfer learning, the resulting model
+        at 8980 iterations is here:
+        <a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/network-snapshot-008980.pkl">network-snapshot-008980.pkl</a>
+      </p>
+      <p>
+        I'm not sure how to share the actual collection of originals due to copyright and size issues.
+        The unique .tfrecord format datasets generated from the original images to be used by StyleGAN is 
+        over 150G in size.
+      </p>
+    </div>
+
+    <h5 class="title is-5">Generated Samples</h5>
+
+    <div class="content">
+      <p>
+        The “truncation trick” with 10 random vessels with 𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1.
+        As gwern notes this illustrates "the tradeoff between diversity & quality, and the global average".
+        The "global average" vessel forms the middle column of each image grid.
+      </p>
+      <div class="columns">
+        <div class="column">
+          <figure class="image">
+            <img src="/img/trunc1.jpg" alt="">
+            <figcaption>
+              𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1
+            </figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="/img/trunc2.jpg" alt="">
+            <figcaption>
+              𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1
+            </figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
 
     <h5 class="title is-5">Website</h5>
@@ -301,7 +357,13 @@
         The statically-generated site files are hosted on  <a href="https://pages.github.com/">Github Pages</a>.
         (Because I'm using Github Pages, I've enabled vue-router's hash mode rather than the more elegant
         <a href="https://router.vuejs.org/guide/essentials/history-mode.html">history mode</a>.)
-
+      </p>
+      <p>
+        Rather than bear the cost of an expensive GPU-powered server to 
+        dynamically generate sampled images, like other "This X does not exist" sites I simply
+        statically generated a number of images (40,000) and store the image files
+        in Amazon S3.  After playing around with different StyleGAN settings, I ended up
+        using the same setting as gwern for the hyperparameter 𝜓, 0.6.
       </p>
       <p>
         The set of 38,700 "Original" images used for training as well as the 40,000 "Fake" generated images are 
