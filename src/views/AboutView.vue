@@ -190,10 +190,10 @@
       </p>
       <p>
         Using Flickr as a source had the same issues and Google Images.  
-        So instead I focused on museums and auction houses, where I could download enter
+        So instead I focused on museums and auction houses, where I could download entire
         image sets for "vases" and be assured of high-quality images shot against a simple backgrounds.
         Because each site is quite different, 
-        I restored to a variety of scraping tools, from home-grown shell, Python and PHP scripts to more
+        I resorted to a variety of scraping tools, from home-grown shell, Python and PHP scripts to more
         powerful tools like <a href="https://scrapy.org/">Scrapy</a>.        
         The output of all of my scripts is simply dumping image URL's to text files.
         Then, a set of shell scripts iterates through each URL:
@@ -376,6 +376,10 @@
         I have encoded the source URL in IPTC metadata embedded within each "Original" image.
         When the image is clicked, <a href="https://github.com/exif-js/exif-js">exif-js</a>
         reads the IPTC data and a clickable link to the original URL is displayed.
+      </p>
+      <p>
+        The source code for this website is available on Github here:
+        <a href="https://github.com/derekphilipau/this-vue-does-not-exist">https://github.com/derekphilipau/this-vue-does-not-exist</a>
       </p>
     </div>
 
