@@ -16,8 +16,9 @@
 
     <div class="navbar-menu" :class="{ 'is-active': isMenuActive }" id="navbarExampleTransparentExample">
         <div class="navbar-start">
-          <router-link class="navbar-item" :to="{ name: 'fakes' }">Fakes</router-link>
           <router-link class="navbar-item" :to="{ name: 'originals' }">Originals</router-link>
+          <router-link class="navbar-item" :to="{ name: 'fakes' }">Fakes</router-link>
+          <router-link class="navbar-item" :to="{ name: 'qinghua' }">Blue & White</router-link>
           <router-link class="navbar-item" :to="{ name: 'about' }">About</router-link>
             <!--
             <div class="navbar-item has-dropdown is-hoverable">
