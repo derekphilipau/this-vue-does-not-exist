@@ -345,6 +345,83 @@
       </div>
     </div>
 
+    <h5 class="title is-5"><em>Qinghua</em> (Blue & White)</h5>
+    <div class="content">
+      <p>
+        Interested to see the effect of using a more limited dataset to train the model,
+        I created a new collection of images that only included Chinese Blue & White 
+        (<em>qinghua</em>) vessels.  
+        (It's possible that some Dutch Delftware and Japanese Arita-ware snuck in.)
+        This new set was much smaller, only around 2,800 images.
+        Using <em>transfer learning</em>, I started the 
+        StyleGAN software with the original vessels .pkl model 
+        (<a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/network-snapshot-008980.pkl">network-snapshot-008980.pkl</a>)
+        and trained against the new, limited dataset of only Blue & White.
+        After just one round of training I was already getting very good results,
+        but I kept the training going for 10 rounds until the next network snapshot .pkl file
+        was written.  Then, using the new network snapshot I generated images and videos.
+      </p>
+
+      <p>
+        The Blue & White model at 8980 iterations is here:
+        <a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/network-snapshot-009180.pkl">network-snapshot-009180.pkl</a>
+      </p>
+      
+      <div class="columns">
+        <div class="column">
+          <figure class="image">
+            <img src="/img/qhtrunc1.jpg" alt="">
+            <figcaption>
+              The “truncation trick” with 10 random Blue & White vessels.
+              <br/>
+              𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1
+            </figcaption>
+          </figure>
+        </div>
+        <div class="column">
+          <figure class="image">
+            <img src="/img/qhtrunc2.jpg" alt="">
+            <figcaption>
+              The “truncation trick” with 10 random Blue & White vessels.
+              <br/>
+              𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+
+    </div>
+
+    <h5 class="title is-5">Diverse</h5>
+    <div class="content">
+      <p>
+        gwern's <a href="https://www.gwern.net/Faces">article</a> describes the
+        𝜓/“truncation trick”, which is an important, adjustable parameter for generating images with StyleGAN.
+        While most of the images on this website have 𝜓 set to 0.6 (which gives reasonable if boring results),
+        more diverse and distorted images can be generated with 𝜓 at higher numbers.  The "Diverse" section
+        of this website showcases images generated with 𝜓 set at either 1.0 or 1.2.
+        Although there are more artifacts and unrealistic-looking results, many of the images are 
+        more interesting for their artistic possibilities and unusual combination of influences.
+        At times these more diverse images acheive a nostalgic, dreamlike, painterly quality 
+        that I find quite lovely.
+      </p>
+
+      <figure class="image">
+        <img src="/img/diverse1.jpg" alt=""/>
+        <figcaption>
+          Some favorite results from the diverse set.
+        </figcaption>
+      </figure>
+
+      <figure class="image">
+        <img src="/img/diverse2.jpg" alt=""/>
+        <figcaption>
+          Some favorite results from the diverse "qinghua" set.
+        </figcaption>
+      </figure>
+
+    </div>
+
     <h5 class="title is-5">Website</h5>
     <div class="content">
       <p>

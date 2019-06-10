@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import OriginalsView from './views/OriginalsView.vue'
 import FakesView from './views/FakesView.vue'
 import QinghuaView from './views/QinghuaView.vue'
+import DiverseView from './views/DiverseView.vue'
 import About from './views/AboutView.vue'
 import VideoView from './views/VideoView.vue'
 // import RandomFakeView from './views/RandomFakeView.vue'
@@ -32,6 +33,11 @@ export default new Router({
             path: '/qinghua',
             name: 'qinghua',
             component: QinghuaView
+        },
+        {
+            path: '/diverse',
+            name: 'diverse',
+            component: DiverseView
         },
         {
             path: '/about',
