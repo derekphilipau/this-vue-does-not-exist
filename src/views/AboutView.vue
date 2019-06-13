@@ -402,8 +402,8 @@
         of this website showcases images generated with 𝜓 set at either 1.0 or 1.2.
         Although there are more artifacts and unrealistic-looking results, many of the images are 
         more interesting for their artistic possibilities and unusual combination of influences.
-        At times these more diverse images acheive a nostalgic, dreamlike, painterly quality 
-        that I find quite lovely.
+        At times these more diverse images achieve a nostalgic, dreamlike, and painterly quality 
+        that I find very interesting.
       </p>
 
       <figure class="image">
