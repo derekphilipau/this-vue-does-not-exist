@@ -82,9 +82,9 @@
           </p>
           <p>
             <a href="https://www.gwern.net/">Gwern's</a> 
-            excellent <a href="https://www.gwern.net/Faces">Making Anime Faces With StyleGAN</a>
+            excellent <em><a href="https://www.gwern.net/Faces">Making Anime Faces With StyleGAN</a></em>
             introduces the original research paper,
-            "A Style-Based Generator Architecture for Generative Adversarial Networks", Karras et al 2018
+            <em>"A Style-Based Generator Architecture for Generative Adversarial Networks", Karras et al 2018</em>
             (<a href="https://arxiv.org/abs/1812.04948">paper</a>, 
             <a href="https://www.youtube.com/watch?v=kSLJriaOumA">video</a>, 
             <a href="https://github.com/NVlabs/stylegan">source</a>), 
@@ -120,6 +120,8 @@
         </div>
       </div>
     </div>
+
+    <h4 class="title is-4">StyleGAN 1, June 2019</h4>
 
     <h5 class="title is-5">Creating a dataset</h5>
     <div class="content">
@@ -299,15 +301,15 @@
       <p>
         As discussed in the post <a href="https://www.chrisplaysgames.com/gadgets/2019/02/26/training-at-home-and-in-the-cloud/">Training at Home, and in the Cloud</a>,
         training a StyleGAN model from scratch is time-consuming and expensive.
-        Once I reached 9000 iterations, I was reaching my budget limit and still needed 
+        Once I reached 9000 kimg, I was reaching my budget limit and still needed 
         enough computation time to generate samples.
-        Also, from 8500-9000 iterations I noticed that progress had drastically slowed,
+        Also, from 8500-9000 kimg I noticed that progress had drastically slowed,
         and I was getting the "elephant wrinkles" that gwern describes.  Rather than 
         keep going, I hope to acquire a larger, cleaner dataset at a later date and try again.      
       </p>
       <p>
         For those of you who want to try generating samples or transfer learning, the resulting model
-        at 8980 iterations is here:
+        at 8980 kimg is here:
         <a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/network-snapshot-008980.pkl">network-snapshot-008980.pkl</a>
       </p>
       <p>
@@ -422,7 +424,63 @@
 
     </div>
 
-    <h5 class="title is-5">Website</h5>
+    <h4 class="title is-4">StyleGAN 2, April 2020</h4>
+
+    <div class="container">
+      <div class="notification">
+        <div class="content">
+          <p>
+            In December 2020, the Nvidia team released <a href="https://github.com/NVlabs/stylegan2">version 2 of StyleGAN</a>
+            which offered better performance than version 1, and released a companion paper,
+            <em><a href="https://arxiv.org/abs/1912.04958">"Analyzing and Improving the Image Quality of StyleGAN"</a></em>.
+          </p>
+          <p>
+            Excellent article about running StyleGAN2 by Zalando Dublin here: 
+            <em><a href="https://towardsdatascience.com/stylegan-v2-notes-on-training-and-latent-space-exploration-e51cf96584b3">StyleGAN v2: notes on training and latent space exploration</a></em>
+          </p>
+        </div>
+      </div>
+    </div>
+    <p>&nbsp;</p>
+    <h5 class="title is-5">This Glaze Does Not Exist.</h5>
+
+    <div class="content">
+      <p>
+        Out of curiosity and as a test run of StyleGAN2, I created a dataset of about 15,000 public images from <a href="https://glazy.org">Glazy</a>
+        I manually removed a number of images that included hands & fingers, complex background elements, and other disqualifying characteristics.
+        However, the remaining images still included a wide variation of not only colors and surfaces, but also shapes of glaze test tiles.
+        I used ImageMagick convert to precisely resize the images to 512x512 pixels in dimension, 
+        then used identify to verify that all images were in the correct sRGB colorspace. 
+        Finally I ran StyleGAN2's dataset_tool.py to create the multi-resolution datasets.
+      </p>
+      <p>
+        I again used <a href="https://cloud.google.com/products/ai/">Google Cloud's AI Platform</a> on a server with a single Nvidia V100 GPU.
+        I encountered some issues with the server environment, my advice is to just follow the Requirements
+        section of the <a href="https://github.com/NVlabs/stylegan2">StyleGAN2</a> documentation and ensure you are running the exact same versions of CUDA, CuDNN, TensorFlow, Python, etc.
+        Otherwise you might spend a lot of time fixing dependencies and dealing with version conflicts like I did.
+      </p>
+      <p>
+        I trained a new network from scratch using configuration "E":
+        <code>
+          python stylegan2-master/run_training.py --num-gpus=1 --data-dir=datasets --config=config-e --dataset=glaze --total-kimg=10000
+        </code>
+      </p>
+      <p>
+        Given this poor dataset, I was not optimistic.  
+        But after only a few hundred iterations the results were already very promising.
+        At around 800 kimg the images were already good enough as a proof of concept,
+        and I stopped training.
+      </p>
+
+      <figure class="image">
+        <img src="/img/glazes.jpg" alt=""/>
+        <figcaption>
+          Curated images with 𝜓 1.0 generated using the network trained for 782 iterations against the Glazy glaze test dataset.
+        </figcaption>
+      </figure>
+    </div>
+
+    <h4 class="title is-4">Website</h4>
     <div class="content">
       <p>
         The website itself is a <a href="https://vuejs.org/">Vue.js</a> Single-Page Application (SPA)
