@@ -4,6 +4,7 @@ import OriginalsView from './views/OriginalsView.vue'
 import FakesView from './views/FakesView.vue'
 import QinghuaView from './views/QinghuaView.vue'
 import DiverseView from './views/DiverseView.vue'
+import HybridView from './views/HybridView.vue'
 import About from './views/AboutView.vue'
 import VideoView from './views/VideoView.vue'
 // import RandomFakeView from './views/RandomFakeView.vue'
@@ -38,6 +39,11 @@ export default new Router({
             path: '/diverse',
             name: 'diverse',
             component: DiverseView
+        },
+        {
+            path: '/hybrids',
+            name: 'hybrids',
+            component: HybridView
         },
         {
             path: '/about',

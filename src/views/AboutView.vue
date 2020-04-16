@@ -565,6 +565,20 @@
     </section>
 
 
+    <h5 class="title is-5">Beetlevase</h5>
+
+    <div class="content">
+
+      <p>
+      </p>
+
+      <video autoplay loop muted playsinline>
+        <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/v2/beetlevase/beetlevase1.m4v" type="video/mp4">
+      </video>
+
+    </div>
+
+
     <section class="section">
       <h4 class="title is-4">Website</h4>
       <div class="content">

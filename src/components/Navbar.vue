@@ -20,6 +20,7 @@
           <router-link class="navbar-item" :to="{ name: 'fakes' }">Fakes</router-link>
           <router-link class="navbar-item" :to="{ name: 'qinghua' }">Qinghua</router-link>
           <router-link class="navbar-item" :to="{ name: 'diverse' }">Diverse</router-link>
+          <router-link class="navbar-item" :to="{ name: 'hybrids' }">Hybrids</router-link>
           <router-link class="navbar-item" :to="{ name: 'about' }">About</router-link>
             <!--
             <div class="navbar-item has-dropdown is-hoverable">
