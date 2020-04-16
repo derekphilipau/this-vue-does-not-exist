@@ -2,10 +2,10 @@
   <div class="originals">
     <RandomGallery 
       fileExtension='jpg'
-      imgBaseUrl='http://thisvesseldoesnotexist.s3-website-us-west-2.amazonaws.com/public/originals/'
+      imgBaseUrl='http://thisvesseldoesnotexist.s3-website-us-west-2.amazonaws.com/public/v2/originals/'
       :idLength=7
       :minId=1
-      :maxId=38196
+      :maxId=10000
       :pageSize=20
       />
   </div>
