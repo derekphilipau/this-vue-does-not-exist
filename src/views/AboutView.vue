@@ -333,20 +333,16 @@
         </p>
         <div class="columns">
           <div class="column">
-            <figure class="image">
-              <img src="/img/v1/trunc1.jpg" alt="">
-              <figcaption>
-                𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1
-              </figcaption>
-            </figure>
+            <ModalImage 
+              imgUrl="/img/v1/trunc1.jpg"
+              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1" 
+              />
           </div>
           <div class="column">
-            <figure class="image">
-              <img src="/img/v1/trunc2.jpg" alt="">
-              <figcaption>
-                𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1
-              </figcaption>
-            </figure>
+            <ModalImage 
+              imgUrl="/img/v1/trunc2.jpg"
+              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1" 
+              />
           </div>
         </div>
       </div>
@@ -375,24 +371,16 @@
         
         <div class="columns">
           <div class="column">
-            <figure class="image">
-              <img src="/img/v1/qhtrunc1.jpg" alt="">
-              <figcaption>
-                The “truncation trick” with 10 random Blue & White vessels.
-                <br/>
-                𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1
-              </figcaption>
-            </figure>
+            <ModalImage 
+              imgUrl="/img/v1/qhtrunc1.jpg"
+              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1" 
+              />
           </div>
           <div class="column">
-            <figure class="image">
-              <img src="/img/v1/qhtrunc2.jpg" alt="">
-              <figcaption>
-                The “truncation trick” with 10 random Blue & White vessels.
-                <br/>
-                𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1
-              </figcaption>
-            </figure>
+            <ModalImage 
+              imgUrl="/img/v1/qhtrunc2.jpg"
+              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1" 
+              />
           </div>
         </div>
       </div>
@@ -411,19 +399,15 @@
           that I find very interesting.
         </p>
 
-        <figure class="image">
-          <img src="/img/v1/diverse1.jpg" alt=""/>
-          <figcaption>
-            Some favorite results from the diverse set.
-          </figcaption>
-        </figure>
+        <ModalImage 
+          imgUrl="/img/v1/diverse1.jpg"
+          caption="Some favorite results from the diverse set." 
+          />
 
-        <figure class="image">
-          <img src="/img/v1/diverse2.jpg" alt=""/>
-          <figcaption>
-            Some favorite results from the diverse "qinghua" set.
-          </figcaption>
-        </figure>
+        <ModalImage 
+          imgUrl="/img/v1/diverse2.jpg"
+          caption="Some favorite results from the diverse qinghua set." 
+          />
 
       </div>
     </section>
@@ -478,12 +462,11 @@
           and I stopped training.
         </p>
 
-        <figure class="image">
-          <img src="/img/v2/glazes.jpg" alt=""/>
-          <figcaption>
-            Curated images with 𝜓 1.0 generated using the network trained for 782 iterations against the Glazy glaze test dataset.
-          </figcaption>
-        </figure>
+        <ModalImage 
+          imgUrl="/img/v2/glazes.jpg"
+          caption="Curated images with 𝜓 1.0 generated using the network trained for 782 iterations against the Glazy glaze test dataset." 
+          />
+
       </div>
 
       <h5 class="title is-5">"This Vessel Does Not Exist" Version 2</h5>
@@ -502,27 +485,28 @@
         <p>
         </p>
 
-        <figure class="image">
-          <img src="/img/v2/earlyiteration.jpg" alt="Generated images from an early model after 120 iterations."/>
-          <figcaption>
-            Generated images from an early model after only 120 iterations.
-          </figcaption>
-        </figure>
+        <ModalImage 
+          imgUrl="/img/v2/earlyiteration.jpg"
+          caption="Generated images from an early model after only 120 iterations." 
+          />
 
-
-        <figure class="image">
-          <img src="/img/v2/stylemix.jpg" alt="Mixing styles with the StyleGAN2 10000Kimg model."/>
-          <figcaption>
-            Mixing styles with the StyleGAN2 10000Kimg model.
-          </figcaption>
-        </figure>
+        <ModalImage 
+          imgUrl="/img/v2/stylemix.jpg"
+          caption="Mixing styles with the StyleGAN2 10000Kimg model." 
+          />
 
       </div>
 
 
-      <h5 class="title is-5">Beetles Transfer Learning</h5>
+      <h5 class="title is-5">Transfer Learning</h5>
 
       <div class="content">
+
+
+        <ModalImage 
+          imgUrl="/img/v2/greek-0.8.jpg"
+          caption="Greek vessels dataset of ~2,000 images trained for 120 Kimg against the 10,000 Kimg vases model." 
+          />
 
         <p>
           To test transfer learning against my new StyleGAN2 model, I looked for a dataset with 
@@ -538,27 +522,20 @@
           beetles.  After 180 Kimg the results were so good that I just stopped training.
         </p>
 
-        <figure class="image">
-          <img src="/img/v2/beetles_fakes010060.jpg" alt="Transfer learning results after only 60 Kimg."/>
-          <figcaption>
-            Beetles dataset of ~4000 images trained for only 60 Kimg against the 10,000 Kimg vases model.
-          </figcaption>
-        </figure>
+        <ModalImage 
+          imgUrl="/img/v2/beetles_fakes010060.jpg"
+          caption="Beetles dataset of ~4000 images trained for only 60 Kimg against the 10,000 Kimg vases model." 
+          />
 
-        <figure class="image">
-          <img src="/img/v2/beetles_fakes010180.jpg" alt="Transfer learning results after only 180 Kimg."/>
-          <figcaption>
-            Same Beetles dataset after training for 180 Kimg.
-          </figcaption>
-        </figure>
+        <ModalImage 
+          imgUrl="/img/v2/beetles_fakes010180.jpg"
+          caption="Same Beetles dataset after training for 180 Kimg." 
+          />
 
-        <figure class="image">
-          <img src="/img/v2/010180_psi0.8_samples.jpg" alt="Selected beetle samples at 180 Kimg, 𝜓 0.8"/>
-          <figcaption>
-            Selected beetle samples at 180 Kimg, 𝜓 0.8
-          </figcaption>
-        </figure>
-        
+        <ModalImage 
+          imgUrl="/img/v2/010180_psi0.8_samples.jpg"
+          caption="Selected beetle samples at 180 Kimg, 𝜓 0.8" 
+          />
 
       </div>
 
@@ -575,6 +552,16 @@
       <video autoplay loop muted playsinline>
         <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/v2/beetlevase/beetlevase1.m4v" type="video/mp4">
       </video>
+
+
+
+      <p>
+      </p>
+
+      <ModalImage 
+        imgUrl="/img/v2/beetlevases.jpg"
+        caption="Beetle/Vase hybrids created using transfer learning.  60 Kimg, 𝜓 1.2" 
+        />
 
     </div>
 
@@ -678,6 +665,16 @@
   </div>
 </template>
 
+<script>
+import ModalImage from '../components/ModalImage.vue'
+
+export default {
+  name: 'AboutView',
+  components: {
+    ModalImage
+  }
+}
+</script>
 
 <style lang="scss">
 .donation-link img:hover {

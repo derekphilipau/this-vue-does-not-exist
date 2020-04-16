@@ -24,7 +24,7 @@
       <div class="modal-background" @click="modalImageUrl = ''"></div>
       <div class="modal-content">
         <figure class="image">
-          <img :src="modalImageUrl" ref="modalImageRef" v-on:load="modalImageLoaded" alt="">
+          <img :src="modalImageUrl" ref="modalImageRef" v-on:load="modalImageLoaded" alt="" />
           <figcaption v-if="modalImageExternalUrl">
             <a :href="modalImageExternalUrl">{{ modalImageExternalUrl }}</a>
           </figcaption>
@@ -133,7 +133,7 @@ export default {
 }
 </script>
 
-<style >
+<style scoped>
   .gallery-columns {
     margin: 0;
     padding: 0;
@@ -144,7 +144,7 @@ export default {
     line-height: 0;
   }
   .gallery-column:hover  {
-    filter: brightness(75%);
+    filter: brightness(90%);
   }
   .infinite-loading-container .infinite-status-prompt {
     margin: 40px 0;
