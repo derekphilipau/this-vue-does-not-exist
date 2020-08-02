@@ -432,7 +432,7 @@
       </div>
       <p>&nbsp;</p>
 
-      <h5 class="title is-5">This Glaze Does Not Exist.</h5>
+      <h5 class="title is-5 mt-4">This Glaze Does Not Exist.</h5>
 
       <div class="content">
         <p>
@@ -565,6 +565,101 @@
 
     </div>
 
+    <section class="section">
+      <h4 class="title is-4">GPT-3, July 2020</h4>
+      <div class="container">
+        <div class="content">
+          <p>
+            GPT-3 is a huge 175 billion parameter language model from OpenAI that creates responses to short textual inputs.
+            To learn more about GPT-3, see <a href="https://www.gwern.net/GPT-3">gwern's article here</a>.
+            I'm still waiting to get access to <a href="https://beta.openai.com/">OpenAI's GPT-3 API</a>. 
+            In the meantime, I've been accessing the model via
+            <a href="https://play.aidungeon.io/">AI Dungeon's</a> amazing text adventure game.
+            (It's kind of like an endless "Choose Your Own Adventure" book, with various genres like Cyberpunk and Fantasy.)
+            In order to access the GPT-3 model, once you join AI Dungeon you'll need to open Settings and turn on "Dragon" Mode.
+          <p>
+            Here are some of the responses to my questions about Ceramics and Art.  (My input in bold.)
+          </p>
+          <h5 class="title is-5">Story #1</h5>
+          <div style="font-family: monospace;">
+            <p>
+              <strong>> You say "Please tell me what kind of art I should make."</strong>
+            </p>
+            <p>
+              I think that if we are to be great artists, then we should start by sculpting something that is dear to us. It can be something from our imagination or an object we find.
+            </p>
+            <p>
+              <strong>> You say "What is dear to me?"</strong>
+            </p>
+            <p>
+              That's a good question! I think that whatever you sculpt will need to be something that is dear to you on some level. Let me think of an example.
+            </p>
+            <p>
+              You: What if we sculpt a plate?
+            </p>
+            <p>
+              Friend: A plate? That's something we see every day. Why would we want to sculpt something ordinary like that? I think we should sculpt something more interesting!
+            </p>
+            <p>
+              You: But not everything is interesting to look at. Not everything is pretty or exciting or funny or thrilling. Sometimes, things are just there.
+            </p>
+            <p>
+              Friend: Maybe you're right. Maybe a plate is something that is dear to us. Not just because we use it every day, but because it's something that brings us nourishment. Something that gives us strength. Something that will hold the food that will give us energy to sculpt more! Let's sculpt a plate!
+            </p>
+            <p>
+              You both grab some clay and get to work.
+            </p>
+          </div>
+
+          <h5 class="title is-5 mt-4">Story #2</h5>
+          <div style="font-family: monospace;">
+            <p>
+              You stare in awe at the old man. How can he be so powerful? He's not a magician. He's a potter!
+            </p>
+            <p>
+              "No!" you cry out in anguish. "It is too terrible a magic!"
+            </p>
+            <p>
+              The old man pauses and looks up at you for the first time. He stares at you with his dark eyes, unblinking. Then he resumes his work, speaking softly as before.
+            </p>
+            <p>
+              "What do you think I have been doing all these years, child? Do you think I have been shaping clay during all this time? No. I have been creating life.
+            </p>
+            <p>
+              "These are not pots I shape. The pots themselves are incidental. I am giving life to the inanimate, and that is a magic not to be undertaken lightly. It is a holy art.
+            </p>  
+          </div>
+
+          <h5 class="title is-5 mt-4">Story #3</h5>
+          <div style="font-family: monospace;">
+            <p>
+              You begin work on your new style of pottery. You create a cup with black glaze. You put it in the kiln and fire it. When you open it, the cup is gone. Only gray ash remains.
+            </p>
+            <p>
+              You try again, making a jug with a tan glaze. You fire it and once again, it disappears.
+            </p>
+            <p>
+              <strong>> You say "Why did the pottery disappear?"</strong>
+            </p>
+            <p>
+              You begin again, this time making a pot with a green glaze. It, too, disappears when you put it in the kiln.
+              What will you do next?
+            </p>
+            <p>
+              <strong>> You create a new pot, but this time with a white glaze.</strong>
+            </p>
+            <p>
+              You create a pot with a white glaze. When you put it in the kiln, it shatters.
+            </p>
+            <p>
+              The rest of your days are spent as an accountant.
+            </p>
+          </div>
+
+        </div>
+      </div>
+      <p>&nbsp;</p>
+    </section>
 
     <section class="section">
       <h4 class="title is-4">Website</h4>
