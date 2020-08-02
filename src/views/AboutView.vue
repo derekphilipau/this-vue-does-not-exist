@@ -577,6 +577,7 @@
             <a href="https://play.aidungeon.io/">AI Dungeon's</a> amazing text adventure game.
             (It's kind of like an endless "Choose Your Own Adventure" book, with various genres like Cyberpunk and Fantasy.)
             In order to access the GPT-3 model, once you join AI Dungeon you'll need to open Settings and turn on "Dragon" Mode.
+          </p>
           <p>
             Here are some of the responses to my questions about Ceramics and Art.  (My input in bold.)
           </p>
@@ -659,6 +660,56 @@
         </div>
       </div>
       <p>&nbsp;</p>
+    </section>
+
+    <section class="section">
+      <h4 class="title is-4">This inspirational art quote does not exist.</h4>
+      <div class="container">
+        <div class="content">
+          <p>
+            After prompting the GPT-3 with real quotes by famous artists like <em>"Art is a line around your thoughts"</em> (Gustav Klimt) 
+            and <em>"To be an artist is to believe in life"</em> (Henry Moore), GPT-3 responded with a wide range of its own quotes.  
+            A small percentage of the generated quotes were plagiarised 
+            (<em>"We don’t make mistakes, just happy little accidents."</em> – Bob Ross).  
+            Most of the quotes were trite cliches like <em>"A picture speaks more than words ever can."</em>
+          </p>
+          <p>
+            Out of about 40 responses, here are three of the more interesting quotes.  
+            I have attempted to verify they are not plagiarized by searching Google for 
+            the entire quotes as well as sentence fragments.
+          </p>
+          <div class="columns">
+            <div class="column">
+              <figure class="image">
+                <img src="/img/quotes/20200731-GPT3-quotes-1.jpg" alt="GPT-3 Generated Inspirational Art Quote">
+                <figcaption>
+                  GPT-3 Generated Inspirational Art Quote
+                </figcaption>
+              </figure>
+            </div>
+            <div class="column">
+              <figure class="image">
+                <img src="/img/quotes/20200731-GPT3-quotes-2.jpg" alt="GPT-3 Generated Inspirational Art Quote">
+                <figcaption>
+                  GPT-3 Generated Inspirational Art Quote
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <figure class="image">
+                <img src="/img/quotes/20200731-GPT3-quotes-3.jpg" alt="GPT-3 Generated Inspirational Art Quote">
+                <figcaption>
+                  GPT-3 Generated Inspirational Art Quote
+                </figcaption>
+              </figure>
+            </div>
+            <div class="column">
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="section">
