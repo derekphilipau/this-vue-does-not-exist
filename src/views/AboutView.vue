@@ -713,6 +713,93 @@
     </section>
 
     <section class="section">
+      <h4 class="title is-4">GPT-2, December 2020</h4>
+      <div class="container">
+        <div class="content">
+          <p>
+            Having been on the GPT-3 API waitlist for months, I finally just decided to fine-tune the GPT-2 355M model
+            using over 10,000 public Glazy recipes.  Although the loss was still going down, after 6,000 steps
+            I stopped training as I noticed more duplicates being generated and I was afraid of overfitting my relatively
+            small dataset.
+          </p>
+          <p>
+            Sample recipe from training data:
+            <pre>
+  RECIPE: Winokur Yellow
+  INGREDIENT: 53.2000	Potash Feldspar
+  INGREDIENT: 22.9000	Kaolin
+  INGREDIENT: 19.4000	Dolomite
+  INGREDIENT: 4.5000	Whiting
+  INGREDIENT: 16.9000	Zircopax
+  INGREDIENT: 3.5000	Tin Oxide
+  INGREDIENT: 1.4000	Red Iron Oxide</pre>
+          </p>
+          <p>
+            I generated two sets of recipes, one with GPT-2 temperature set at 0.7 and one at 0.9.  The results for both
+            sets were surprisingly good:  At first glance the recipes seemed "real" with proportional mixes of feldspars, 
+            clays, silica, fluxes and colorants/opacifiers.  Even the total ingredient amounts added up to a reasonable
+            number, usually in the range of 90-110%.  The duplication rate was about 5% for t=0.7 and 4.5% for t=0.9.
+          </p>
+          <p>
+            Sample generated recipes:
+            <pre>
+Crawly Elsie's Matte-04
+38.0000	EP Kaolin
+28.0000	Gerstley Borate
+19.0000	G-200 Feldspar
+9.0000	Lepidolite
+6.0000	Soda Ash
+4.0000	Wollastonite
+
+Ame-Sosa-Wenkel
+38.0000	Nepheline Syenite
+29.0000	Silica
+12.0000	Colemanite
+8.0000	Whiting
+6.0000	Dolomite
+5.0000	Barium Carbonate
+2.0000	Bentonite
+1.0000	Rutile
+0.7500	Copper Carbonate
+
+Amber Celadon
+34.0000	Albany slip
+20.0000	Custer Feldspar
+13.0000	Silica
+13.0000	Wollastonite
+6.0000	Whiting
+3.0000	EP Kaolin
+3.0000	Gerstley Borate
+3.0000	Rutile
+2.0000	Red Iron Oxide
+
+Craters
+30.0000	Lithium Carbonate
+30.0000	Silica
+15.0000	Borax
+10.0000	Zircopax
+10.0000	Kaolin
+5.0000	Bentonite
+3.0000	Copper Carbonate</pre>
+          </p>
+          <p>
+            The next step was to load the GPT-2 generated recipes into Glazy in order to see their resulting analyses
+            and visualize them on the Stull Chart.  I was surprised to find that, as with "real" glaze recipes, most of
+            these generated recipes fell comfortably within the major Stull regions of Bright, Matte, and Semi-Matte.
+            I guess it makes sense that the set with temperature setting of 0.9 generated more variation and less
+            duplicates.
+          </p>
+          <figure class="image">
+            <img src="/img/gpt-2/StullCharts.jpg" alt="Generated recipes displayed in the Stull Chart.">
+            <figcaption>
+              Generated recipes displayed in the Stull Chart.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
       <h4 class="title is-4">Website</h4>
       <div class="content">
         <p>
