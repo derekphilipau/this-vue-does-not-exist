@@ -723,6 +723,11 @@
             duplicates being generated and I was afraid of overfitting my relatively small dataset.
           </p>
           <p>
+            As always, Gwern has a wonderful article, <a href="https://www.gwern.net/GPT-2">GPT-2 Neural Network Poetry</a>.
+            For training I followed Max Woolf's article <a href="https://minimaxir.com/2019/09/howto-gpt2/">How To Make Custom AI-Generated Text With GPT-2</a>
+            and used Max's wonderful <a href="https://colab.research.google.com/drive/1VLG8e7YSEwypxU-noRNhsv5dW4NfTGce">Colab Notebook</a>
+          </p>
+          <p>
             Sample recipe from training data:
             <pre>
 RECIPE: Winokur Yellow
