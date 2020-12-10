@@ -717,22 +717,22 @@
       <div class="container">
         <div class="content">
           <p>
-            Having been on the GPT-3 API waitlist for months, I finally just decided to fine-tune the GPT-2 355M model
-            using over 10,000 public Glazy recipes.  Although the loss was still going down, after 6,000 steps
-            I stopped training as I noticed more duplicates being generated and I was afraid of overfitting my relatively
-            small dataset.
+            Having been on the GPT-3 API waitlist for months, I finally just decided to fine-tune the older and smaller
+            GPT-2 355M model using over 10,000 public Glazy recipes as training data.
+            Although the loss was still going down after 6,000 steps, I stopped training at that point as I noticed more
+            duplicates being generated and I was afraid of overfitting my relatively small dataset.
           </p>
           <p>
             Sample recipe from training data:
             <pre>
-  RECIPE: Winokur Yellow
-  INGREDIENT: 53.2000	Potash Feldspar
-  INGREDIENT: 22.9000	Kaolin
-  INGREDIENT: 19.4000	Dolomite
-  INGREDIENT: 4.5000	Whiting
-  INGREDIENT: 16.9000	Zircopax
-  INGREDIENT: 3.5000	Tin Oxide
-  INGREDIENT: 1.4000	Red Iron Oxide</pre>
+RECIPE: Winokur Yellow
+INGREDIENT: 53.2000	Potash Feldspar
+INGREDIENT: 22.9000	Kaolin
+INGREDIENT: 19.4000	Dolomite
+INGREDIENT: 4.5000	Whiting
+INGREDIENT: 16.9000	Zircopax
+INGREDIENT: 3.5000	Tin Oxide
+INGREDIENT: 1.4000	Red Iron Oxide</pre>
           </p>
           <p>
             I generated two sets of recipes, one with GPT-2 temperature set at 0.7 and one at 0.9.  The results for both
@@ -741,7 +741,7 @@
             number, usually in the range of 90-110%.  The duplication rate was about 5% for t=0.7 and 4.5% for t=0.9.
           </p>
           <p>
-            Sample generated recipes:
+            Sample generated recipes (removing "RECIPE:" and "INGREDIENT:" tags):
             <pre>
 Crawly Elsie's Matte-04
 38.0000	EP Kaolin
@@ -783,11 +783,17 @@ Craters
 3.0000	Copper Carbonate</pre>
           </p>
           <p>
+            Downloads:
+            <br/>
+            <a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/gpt-2/GPT-2_t0.7_no_duplicates.txt">Temperature 0.7 Generated Recipes</a>
+            <br/>
+            <a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/gpt-2/GPT-2_t0.9_no_duplicates.txt">Temperature 0.9 Generated Recipes</a>
+          </p>
+          <p>
             The next step was to load the GPT-2 generated recipes into Glazy in order to see their resulting analyses
             and visualize them on the Stull Chart.  I was surprised to find that, as with "real" glaze recipes, most of
             these generated recipes fell comfortably within the major Stull regions of Bright, Matte, and Semi-Matte.
-            I guess it makes sense that the set with temperature setting of 0.9 generated more variation and less
-            duplicates.
+            The set with temperature setting of 0.9 generated more variation.
           </p>
           <figure class="image">
             <img src="/img/gpt-2/StullCharts.jpg" alt="Generated recipes displayed in the Stull Chart.">
@@ -795,6 +801,9 @@ Craters
               Generated recipes displayed in the Stull Chart.
             </figcaption>
           </figure>
+          <p>
+            Next Steps:  I am about to fire a few of these generated recipes and will post the results here soon!
+          </p>
         </div>
       </div>
     </section>
