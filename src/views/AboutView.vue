@@ -807,8 +807,21 @@ Craters
             </figcaption>
           </figure>
           <p>
-            Next Steps:  I am about to fire a few of these generated recipes and will post the results here soon!
+            The obvious next step was to fire some of these "fake" recipes and create real glazes.
+            Rather than randomly testing, I selected a few recipes that looked like they would fire to maturity
+            at my chosen temperature and atmosphere, Orton cone 6 in Oxidation.  The results were all quite good,
+            and I uploaded a couple to Glazy:
+            <br/>
+            <a href="https://glazy.org/recipes/111067">GPT-2 Yellow Textured</a>
+            <br/>
+            <a href="https://glazy.org/recipes/111070">GPT-2 Three's Company</a>
           </p>
+          <figure class="image">
+            <img src="/img/gpt-2/tests.jpg" alt="Selected generated recipes fired at Orton cone 6 in Oxidation.">
+            <figcaption>
+              Selected generated recipes fired at Orton cone 6 in Oxidation.
+            </figcaption>
+          </figure>
         </div>
       </div>
     </section>
