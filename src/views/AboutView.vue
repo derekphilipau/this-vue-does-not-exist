@@ -1,6 +1,5 @@
 <template>
   <div class="container about-container">
-
     <section class="section">
       <h1 class="title is-1">This vessel does not exist.</h1>
       <div class="content">
@@ -807,6 +806,15 @@ Craters
             </figcaption>
           </figure>
           <p>
+            Training against a subset of recipes, using only the cone 6 glazes, gave results with lower Silica and Alumina, as well as higher Boron.
+          </p>
+          <figure class="image">
+            <img src="/img/gpt-2/StullChartsCone6.jpg" alt="Cone 6 generated recipes showing lower Silica & Alumina as well as higher levels of boron.">
+            <figcaption>
+              Cone 6 generated recipes showing lower Silica & Alumina as well as higher levels of Boron.
+            </figcaption>
+          </figure>
+          <p>
             The obvious next step was to fire some of these "fake" recipes and create real glazes.
             Rather than randomly testing, I selected a few recipes that looked like they would fire to maturity
             at my chosen temperature and atmosphere, Orton cone 6 in Oxidation.  The results were all quite good,
@@ -822,6 +830,68 @@ Craters
               Selected generated recipes fired at Orton cone 6 in Oxidation.
             </figcaption>
           </figure>
+          <p>
+            Using <a href="https://github.com/derekphilipau/glazy-data">Glazy's public data (https://github.com/derekphilipau/glazy-data)</a>
+            I attempted to associate glaze metadata (type, surface, transparency and temperature) with analyses.
+          </p>
+          <p>
+            Input sample:
+            <pre>
+TYPE: Iron - Celadon
+SURFACE: Glossy
+TRANSPARENCY: Transparent
+CONE: 9
+SiO2: 66.12, Al2O3: 12.08, K2O: 3.13, Na2O: 0.84, MgO: 0.06, CaO: 12.67, Fe2O3: 0.16, CuO: 0.01, ZrO2: 0.26
+
+TYPE: Clear
+SURFACE: Glossy
+TRANSPARENCY: Transparent
+CONE: 8
+SiO2: 53.49, Al2O3: 9.29, B2O3: 2.08, Li2O: 1.01, K2O: 0.29, Na2O: 1.11, MgO: 0.03, CaO: 0.12, BaO: 21.06, ZnO: 3.98, Fe2O3: 0.08, CuO: 0.01, ZrO2: 0.93</pre>
+          </p>
+          <p>
+            Output sample:
+            <pre>
+TYPE: Glaze
+SURFACE: N/A
+TRANSPARENCY: N/A
+CONE: 10
+SiO2: 61.7, Al2O3: 8.74, B2O3: 4.26, K2O: 4.05, Na2O: 1.87, MgO: 0.52, CaO: 8.46, P2O5: 0.01, Fe2O3: 0.24, TiO2: 0.17
+
+TYPE: Iron - Celadon - Blue
+SURFACE: Glossy
+TRANSPARENCY: Translucent
+CONE: 9
+SiO2: 61.75, Al2O3: 12.13, K2O: 3.16, Na2O: 0.98, MgO: 0.09, CaO: 10.90, Fe2O3: 0.72
+
+TYPE: Blue - Cobalt
+SURFACE: Glossy
+TRANSPARENCY: Translucent
+CONE: 9
+SiO2: 61.44, Al2O3: 12.06, K2O: 2.75, Na2O: 0.93, MgO: 0.07, CaO: 11.31, Fe2O3: 0.72, CoO: 1.83, TiO2: 0.31
+
+TYPE: Blue - Cobalt
+SURFACE: Glossy
+TRANSPARENCY: Translucent
+CONE: 9
+SiO2: 61.44, Al2O3: 12.06, K2O: 2.75, Na2O: 0.93, MgO: 0.07, CaO: 11.31, Fe2O3: 0.72, CoO: 2.33, TiO2: 0.31
+
+TYPE: Specialty - Crawling
+SURFACE: Glossy
+TRANSPARENCY: Opaque
+CONE: 6
+SiO2: 51.63, Al2O3: 16.32, B2O3: 3.20, K2O: 2.63, Na2O: 2.25, MgO: 3.71, CaO: 2.96, P2O5: 0.10, Fe2O3: 0.60, CoO: 0.82, TiO2: 2.82
+
+TYPE: Iron - Kaki, Tomato Red
+SURFACE: Matte - Smooth
+TRANSPARENCY: Opaque
+CONE: 6
+SiO2: 44.64, Al2O3: 12.17, B2O3: 3.06, K2O: 0.07, Na2O: 4.76, MgO: 3.96, CaO: 7.55, P2O5: 2.08, Fe2O3: 8.72, TiO2: 0.06</pre>
+          </p>
+          <p>
+            Downloads: 
+            <a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/gpt-2/gpt2_analyses3_0.9_20201213_082842.txt">Generated "fake" analyses</a>
+          </p>
         </div>
       </div>
     </section>

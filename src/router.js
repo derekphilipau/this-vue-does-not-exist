@@ -6,8 +6,8 @@ import QinghuaView from './views/QinghuaView.vue'
 import DiverseView from './views/DiverseView.vue'
 import HybridView from './views/HybridView.vue'
 import DressView from './views/DressView.vue'
-import About from './views/AboutView.vue'
-import VideoView from './views/VideoView.vue'
+import AboutView from './views/AboutView.vue'
+// import VideoView from './views/VideoView.vue'
 // import RandomFakeView from './views/RandomFakeView.vue'
 
 Vue.use(Router)
@@ -18,7 +18,7 @@ export default new Router({
     linkExactActiveClass: 'is-active',
     routes: [{
             path: '/',
-            component: VideoView,
+            component: AboutView,
             name: 'home'
         },
         {
@@ -53,8 +53,7 @@ export default new Router({
         },
         {
             path: '/about',
-            name: 'about',
-            component: About
+            redirect: '/'
         }
     ]
 })

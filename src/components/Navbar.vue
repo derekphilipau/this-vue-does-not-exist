@@ -22,8 +22,8 @@
           <router-link class="navbar-item" :to="{ name: 'diverse' }">Diverse</router-link>
           <router-link class="navbar-item" :to="{ name: 'hybrids' }">Hybrids</router-link>
           <router-link class="navbar-item" :to="{ name: 'dresses' }">Dresses</router-link>
-          <router-link class="navbar-item" :to="{ name: 'about' }">About</router-link>
             <!--
+          <router-link class="navbar-item" :to="{ name: 'about' }">About</router-link>
             <div class="navbar-item has-dropdown is-hoverable">
                 <a class="navbar-link" href="https://bulma.io/documentation/overview/start/">
                 Docs
