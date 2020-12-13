@@ -1,5 +1,5 @@
 <template>
-  <div class="zoom-image" v-if="imgUrl">
+  <div class="zoom-image my-4" v-if="imgUrl">
     <a href="#" @click.prevent="showImageModal">
       <figure class="image">
         <img :src="imgUrl" :alt="caption ? caption : ''" />

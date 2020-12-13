@@ -679,30 +679,24 @@
           </p>
           <div class="columns">
             <div class="column">
-              <figure class="image">
-                <img src="/img/quotes/20200731-GPT3-quotes-1.jpg" alt="GPT-3 Generated Inspirational Art Quote">
-                <figcaption>
-                  GPT-3 Generated Inspirational Art Quote
-                </figcaption>
-              </figure>
+              <ModalImage 
+                imgUrl="/img/quotes/20200731-GPT3-quotes-1.jpg"
+                caption="GPT-3 Generated Inspirational Art Quote" 
+                />
             </div>
             <div class="column">
-              <figure class="image">
-                <img src="/img/quotes/20200731-GPT3-quotes-2.jpg" alt="GPT-3 Generated Inspirational Art Quote">
-                <figcaption>
-                  GPT-3 Generated Inspirational Art Quote
-                </figcaption>
-              </figure>
+              <ModalImage 
+                imgUrl="/img/quotes/20200731-GPT3-quotes-2.jpg"
+                caption="GPT-3 Generated Inspirational Art Quote" 
+                />
             </div>
           </div>
           <div class="columns">
             <div class="column">
-              <figure class="image">
-                <img src="/img/quotes/20200731-GPT3-quotes-3.jpg" alt="GPT-3 Generated Inspirational Art Quote">
-                <figcaption>
-                  GPT-3 Generated Inspirational Art Quote
-                </figcaption>
-              </figure>
+              <ModalImage 
+                imgUrl="/img/quotes/20200731-GPT3-quotes-3.jpg"
+                caption="GPT-3 Generated Inspirational Art Quote" 
+                />
             </div>
             <div class="column">
             </div>
@@ -799,21 +793,17 @@ Craters
             these generated recipes fell comfortably within the major Stull regions of Bright, Matte, and Semi-Matte.
             The set with temperature setting of 0.9 generated more variation.
           </p>
-          <figure class="image">
-            <img src="/img/gpt-2/StullCharts.jpg" alt="Generated recipes displayed in the Stull Chart.">
-            <figcaption>
-              Generated recipes displayed in the Stull Chart.
-            </figcaption>
-          </figure>
+          <ModalImage 
+            imgUrl="/img/gpt-2/StullCharts.jpg"
+            caption="Generated recipes displayed in the Stull Chart." 
+            />
           <p>
             Training against a subset of recipes, using only the cone 6 glazes, gave results with lower Silica and Alumina, as well as higher Boron.
           </p>
-          <figure class="image">
-            <img src="/img/gpt-2/StullChartsCone6.jpg" alt="Cone 6 generated recipes showing lower Silica & Alumina as well as higher levels of boron.">
-            <figcaption>
-              Cone 6 generated recipes showing lower Silica & Alumina as well as higher levels of Boron.
-            </figcaption>
-          </figure>
+          <ModalImage 
+            imgUrl="/img/gpt-2/StullChartsCone6.jpg"
+            caption="Cone 6 generated recipes showing lower Silica & Alumina as well as higher levels of boron." 
+            />
           <p>
             The obvious next step was to fire some of these "fake" recipes and create real glazes.
             Rather than randomly testing, I selected a few recipes that looked like they would fire to maturity
@@ -824,12 +814,10 @@ Craters
             <br/>
             <a href="https://glazy.org/recipes/111070">GPT-2 Three's Company</a>
           </p>
-          <figure class="image">
-            <img src="/img/gpt-2/tests.jpg" alt="Selected generated recipes fired at Orton cone 6 in Oxidation.">
-            <figcaption>
-              Selected generated recipes fired at Orton cone 6 in Oxidation.
-            </figcaption>
-          </figure>
+          <ModalImage 
+            imgUrl="/img/gpt-2/tests.jpg"
+            caption="Selected generated recipes fired at Orton cone 6 in Oxidation." 
+            />
           <p>
             Using <a href="https://github.com/derekphilipau/glazy-data">Glazy's public data (https://github.com/derekphilipau/glazy-data)</a>
             I attempted to associate glaze metadata (type, surface, transparency and temperature) with analyses.
