@@ -9,16 +9,19 @@
       </div>
     </div>
     <div class="randomloader">
-      <infinite-loading spinner="circles" @infinite="infiniteHandler">
+      <infinite-loading 
+        v-if="isInfinite"
+        spinner="circles" @infinite="infiniteHandler">
         <div slot="spinner">Loading...</div>
         <div slot="no-more">No more images.</div>
         <div slot="no-results">No more images.</div>
       </infinite-loading>
-    </div>
-    <div class="refresh-me">
-      <a @click="reload()">
-        <img src="/img/icon/refresh.svg" width="32" height="32" />
-      </a>
+      <div :class="isEmbedded ? 'refresh-me-rel' : 'refresh-me'">
+        <a @click="reload()">
+          <img src="/img/icon/refresh.svg" width="32" height="32" />
+          <span class="ml-2">Click to reload</span>
+        </a>
+      </div>
     </div>
     <div class="modal" v-bind:class="modalImageUrl ? 'is-active' : ''">
       <div class="modal-background" @click="modalImageUrl = ''"></div>
@@ -50,6 +53,18 @@ export default {
     minId: Number,
     idLength: Number,
     pageSize: Number,
+    initialPageSize: {
+      type: Number,
+      default: 100
+    },
+    isInfinite: {
+      type: Boolean,
+      default: true
+    },
+    isEmbedded: {
+      type: Boolean,
+      default: false
+    },
     fileExtension: String
   },
   mixins: [galleryMixin],
@@ -63,7 +78,6 @@ export default {
       modalImageExternalUrl: '',
       image: null,
       imageSourceUrl: null,
-      initialPageSize: 100,
       canInfiniteScroll: false,
       scrollIntervalId: null
     };
@@ -74,9 +88,11 @@ export default {
   mounted() {
     this.pad = this.pad.padStart(this.idLength, '0');
     this.init();
-    setTimeout(() => this.canInfiniteScroll = true, 2000);
-    // Page Scroll not working very well...
-    //setTimeout(this.startPageScroll, 2000);
+    if (this.isInfinite) {
+      setTimeout(() => this.canInfiniteScroll = true, 2000);
+      // Page Scroll not working very well...
+      //setTimeout(this.startPageScroll, 2000);
+    }
   },
   destroyed() {
       if (this.scrollIntervalId) {
@@ -95,10 +111,12 @@ export default {
       if (ids.length) {
         this.list.push(...ids);
       }
-      window.scrollTo(0,0);
+      if (!this.isEmbedded) {
+        window.scrollTo(0,0);
+      }
     },
     infiniteHandler($state) {
-      if (this.canInfiniteScroll) {
+      if (this.canInfiniteScroll && this.isInfinite) {
         let ids = this.randomIds.splice(0, this.pageSize);
         if (ids.length) {
           this.page += 1;
@@ -124,7 +142,9 @@ export default {
       this.canInfiniteScroll = false;
       this.list = [];
       this.init();
-      setTimeout(() => this.canInfiniteScroll = true, 2000);
+      if (this.isInfinite) {
+        setTimeout(() => this.canInfiniteScroll = true, 2000);
+      }
     },
     startPageScroll() {
       this.scrollIntervalId = setInterval(function() { window.scrollBy(0,1); }, 50);
@@ -149,5 +169,38 @@ export default {
   .infinite-loading-container .infinite-status-prompt {
     margin: 40px 0;
     font-size: 20px;
+  }
+
+  /* Refresh button used in multiple views. */
+  .refresh-me a
+  {
+    opacity: 0.5;
+    color: black;
+    background-color: transparent;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+  }
+  .refresh-me:hover
+  {
+    opacity: 1;
+    background-color: transparent;
+  }
+
+  .refresh-me-rel
+  {
+    position: relative;
+    margin-top: 10px;
+  }
+  .refresh-me-rel a
+  {
+    opacity: 0.5;
+    color: black;
+    background-color: transparent;
+  }
+  .refresh-me-rel:hover
+  {
+    opacity: 1;
+    background-color: transparent;
   }
 </style>

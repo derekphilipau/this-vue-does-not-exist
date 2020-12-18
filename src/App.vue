@@ -67,21 +67,6 @@ body {
   opacity: 0;
 }
 
-/* Refresh button used in multiple views. */
-.refresh-me
-{
-  opacity: 0.5;
-  background-color: transparent;
-  position: fixed;
-  bottom: 15px;
-  right: 15px;
-}
-.refresh-me:hover
-{
-  opacity: 1;
-  background-color: transparent;
-}
-
 .content figure pre {
   text-align: left !important;
 }

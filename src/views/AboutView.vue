@@ -703,6 +703,37 @@
           </div>
         </div>
       </div>
+      <h5>December 2020 update</h5>
+      <div class="container">
+        <div class="content">
+          <p>After receiving access to a trial of the OpenAI API, I rewrote my prompts
+            for generating fake quotes and received some more interesting responses.
+          </p>
+          <p>
+            Some of these quotes are partial plagiarisms or based on patterns found in real quotes.  
+            For example "Art is the objectification of feeling" is attributed to Herman Melville, 
+            while "Art is the objectification of feeling, and the subjectification of nature" 
+            is attributed to Susanne Langer.  
+            GPT-3 came up with its own version:  
+            "Art is the objectification of imagination seen through the eyes of empathy."
+          </p>
+          <p>
+            Below are some curated examples.  Click the thumbnail for larger version.  "Click to reload"
+            will show a new randomized selection.
+          </p>
+        </div>
+          <RandomGallery 
+            fileExtension='jpg'
+            imgBaseUrl='/img/gpt-3-quotes/'
+            :idLength=2
+            :minId=1
+            :maxId=42
+            :pageSize=10
+            :initialPageSize=10
+            :isInfinite="false"
+            :isEmbedded="true"
+            />
+      </div>
     </section>
 
     <section class="section">
@@ -985,11 +1016,13 @@ SiO2: 44.64, Al2O3: 12.17, B2O3: 3.06, K2O: 0.07, Na2O: 4.76, MgO: 3.96, CaO: 7.
 
 <script>
 import ModalImage from '../components/ModalImage.vue'
+import RandomGallery from '../components/RandomGallery.vue'
 
 export default {
   name: 'AboutView',
   components: {
-    ModalImage
+    ModalImage,
+    RandomGallery
   }
 }
 </script>
