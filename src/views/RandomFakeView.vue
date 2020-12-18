@@ -27,7 +27,7 @@ export default {
       pad: '',
       randomId: null,
       fileExtension: 'jpg',
-      imgBaseUrl: 'http://thisvesseldoesnotexist.s3-website-us-west-2.amazonaws.com/public/fakes/',
+      imgBaseUrl: 'https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/fakes/',
       idLength: 7,
       minId: 1,
       maxId: 100

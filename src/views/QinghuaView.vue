@@ -2,7 +2,7 @@
   <div class="qinghua">
     <RandomGallery 
       fileExtension='jpg'
-      imgBaseUrl='http://thisvesseldoesnotexist.s3-website-us-west-2.amazonaws.com/public/qinghua/'
+      imgBaseUrl='https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/qinghua/'
       :idLength=7
       :minId=1
       :maxId=1000

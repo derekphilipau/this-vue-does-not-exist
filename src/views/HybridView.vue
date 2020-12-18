@@ -2,7 +2,7 @@
   <div class="hybrid">
     <RandomGallery 
       fileExtension='jpg'
-      imgBaseUrl='http://thisvesseldoesnotexist.s3-website-us-west-2.amazonaws.com/public/v2/beetlevase/gallery/'
+      imgBaseUrl='https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/v2/beetlevase/gallery/'
       :idLength=7
       :minId=1
       :maxId=293
