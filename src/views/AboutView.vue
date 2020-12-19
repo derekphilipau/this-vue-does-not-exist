@@ -500,8 +500,6 @@
       <h5 class="title is-5">Transfer Learning</h5>
 
       <div class="content">
-
-
         <ModalImage 
           imgUrl="/img/v2/greek-0.8.jpg"
           caption="Greek vessels dataset of ~2,000 images trained for 120 Kimg against the 10,000 Kimg vases model." 
@@ -538,31 +536,28 @@
 
       </div>
 
+      <h5 class="title is-5">Beetlevase</h5>
+
+      <div class="content">
+
+        <p>
+        </p>
+
+        <video autoplay loop muted playsinline>
+          <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/v2/beetlevase/beetlevase1.m4v" type="video/mp4">
+        </video>
+
+        <p>
+        </p>
+
+        <ModalImage 
+          imgUrl="/img/v2/beetlevases.jpg"
+          caption="Beetle/Vase hybrids created using transfer learning.  60 Kimg, 𝜓 1.2" 
+          />
+
+      </div>
+
     </section>
-
-
-    <h5 class="title is-5">Beetlevase</h5>
-
-    <div class="content">
-
-      <p>
-      </p>
-
-      <video autoplay loop muted playsinline>
-        <source src="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/v2/beetlevase/beetlevase1.m4v" type="video/mp4">
-      </video>
-
-
-
-      <p>
-      </p>
-
-      <ModalImage 
-        imgUrl="/img/v2/beetlevases.jpg"
-        caption="Beetle/Vase hybrids created using transfer learning.  60 Kimg, 𝜓 1.2" 
-        />
-
-    </div>
 
     <section class="section">
       <h4 class="title is-4">GPT-3, July 2020</h4>
@@ -703,7 +698,9 @@
           </div>
         </div>
       </div>
-      <h5>December 2020 update</h5>
+    </section>
+    <section>
+      <h4 class="title is-4">December 2020 update</h4>
       <div class="container">
         <div class="content">
           <p>After receiving access to a trial of the OpenAI API, I rewrote my prompts
@@ -722,6 +719,7 @@
             will show a new randomized selection.
           </p>
         </div>
+        <div class="mb-4">
           <RandomGallery 
             fileExtension='jpg'
             imgBaseUrl='/img/gpt-3-quotes/'
@@ -733,6 +731,22 @@
             :isInfinite="false"
             :isEmbedded="true"
             />
+        </div>
+      </div>
+    </section>
+    <section>
+      <h4 class="title is-4">Pottery Haikus</h4>
+      <div class="container">
+        <div class="content">
+          <p>
+            It was more difficult to get relevant responses prompting the OpenAI API
+            for poetry related to pottery.  But asking for haikus resulted in some interesting results.
+          </p>
+          <ModalImage 
+            imgUrl="/img/gpt-3-quotes/haiku_long.jpg"
+            caption="Curated examples of haikus on the subject of pottery." 
+            />
+        </div>
       </div>
     </section>
 
