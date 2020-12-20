@@ -699,7 +699,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="section">
       <h4 class="title is-4">December 2020 update</h4>
       <div class="container">
         <div class="content">
@@ -734,7 +734,7 @@
         </div>
       </div>
     </section>
-    <section>
+    <section class="section">
       <h4 class="title is-4">Pottery Haikus</h4>
       <div class="container">
         <div class="content">
@@ -746,6 +746,20 @@
             imgUrl="/img/gpt-3-quotes/haiku_long.jpg"
             caption="Curated examples of haikus on the subject of pottery." 
             />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h4 class="title is-4">Artist Statements</h4>
+      <div class="container">
+        <div class="content">
+          <p>
+            GPT-3 generated some amazing artist statements, although upon reflection many of them
+            don't actually make sense.  Or is it that even <i>real</i> Artist Statements don't make 
+            sense?
+          </p>
+          View here: <router-link class="has-text-weight-bold" :to="{ name: 'statements' }">Artist Statements</router-link>
         </div>
       </div>
     </section>

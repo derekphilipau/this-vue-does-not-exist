@@ -1,14 +1,16 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import OriginalsView from './views/OriginalsView.vue'
-import FakesView from './views/FakesView.vue'
-import QinghuaView from './views/QinghuaView.vue'
-import DiverseView from './views/DiverseView.vue'
-import HybridView from './views/HybridView.vue'
-import DressView from './views/DressView.vue'
-import AboutView from './views/AboutView.vue'
-// import VideoView from './views/VideoView.vue'
-// import RandomFakeView from './views/RandomFakeView.vue'
+import OriginalsView from './views/OriginalsView'
+import FakesView from './views/FakesView'
+import QinghuaView from './views/QinghuaView'
+import DiverseView from './views/DiverseView'
+import HybridView from './views/HybridView'
+import DressView from './views/DressView'
+import AboutView from './views/AboutView'
+import ArtistStatements from './views/ArtistStatements'
+
+// import VideoView from './views/VideoView'
+// import RandomFakeView from './views/RandomFakeView'
 
 Vue.use(Router)
 
@@ -50,6 +52,11 @@ export default new Router({
             path: '/dresses',
             name: 'dresses',
             component: DressView
+        },
+        {
+            path: '/statements',
+            name: 'statements',
+            component: ArtistStatements
         },
         {
             path: '/about',
