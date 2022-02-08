@@ -4,6 +4,8 @@ import router from './router'
 
 Vue.config.productionTip = false
 
+var VueScrollTo = require('vue-scrollto');
+Vue.use(VueScrollTo)
 
 //Vue.http.headers.common['Access-Control-Allow-Origin'] = true;
 //Vue.http.headers.common['Access-Control-Request-Method'] = '*';

@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="is-widescreen">
     <Navbar/>
     <transition name="fade">
       <router-view/>
@@ -13,7 +13,7 @@ import Navbar from './components/Navbar.vue'
 export default {
   name: 'app',
   components: {
-    Navbar
+    Navbar,
   }
 }
 </script>
