@@ -36,7 +36,19 @@
       <li><a href="#" v-scroll-to="'#artquotes2'">Art Quotes 2</a></li>
       <li><a href="#" v-scroll-to="'#potteryhaikus'">Pottery Haikus</a></li>
       <li><a href="#" v-scroll-to="'#artstatements'">Artist Statements</a></li>
+    </ul>
+    <p class="menu-label">
+      <a href="#" v-scroll-to="'#genrecipedec'">Generated Recipes</a>
+    </p>
+    <ul class="menu-list">
       <li><a href="#" v-scroll-to="'#genrecipedec'">GPT-2 Generated Recipes</a></li>
+      <li><a href="#" v-scroll-to="'#genrecipemar'">In the Real World!</a></li>
+    </ul>
+    <p class="menu-label">
+      <a href="#" v-scroll-to="'#quickdraw'">Google Quick, Draw!</a>
+    </p>
+    <ul class="menu-list">
+      <li><a href="#" v-scroll-to="'#quickdraw'">What is a vase?</a></li>
     </ul>
     <p class="menu-label">
       <a href="#" v-scroll-to="'#sg3intro'">StyleGAN 3</a>
