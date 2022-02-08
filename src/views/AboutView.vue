@@ -9,43 +9,43 @@
               The history of ceramics is one of imitation and reproduction.
             </p>
             <p>
-              The apprentice obtains mastery of the craft through repetition, 
+              The apprentice obtains mastery of the craft through repetition,
               gradually improving their technique.
-              Guided by a lifetime of working in  the craft, the master 
+              Guided by a lifetime of working in  the craft, the master
               examines each piece made by the student and throws away those deemed unsuitable.
             </p>
             <p>
-              The forger creates replicas and tests them in the marketplace.  
+              The forger creates replicas and tests them in the marketplace.
               The connoisseur, informed by decades of experience dealing with antiques,
               judges the replicas.
-              Those that are mistaken as authentic are sold, 
+              Those that are mistaken as authentic are sold,
               and the forger goes on to create even more convincing copies.
             </p>
             <p>
               The "fake" vessels on this website have been created through a similar process
-              of repetition, examination, and reinforcement.  Except in this case, 
-              the entire procedure has taken place within 
+              of repetition, examination, and reinforcement.  Except in this case,
+              the entire procedure has taken place within
               <a href="https://en.wikipedia.org/wiki/Machine_learning">machine-learning (ML)</a>
-              software known as a 
+              software known as a
               <a href="https://en.wikipedia.org/wiki/Generative_adversarial_network">Generative Adversarial Network (GAN)</a>.
             </p>
             <p>
               GANs consist of two parts: the Generator and the Discriminator.
-              In a very general sense, the role of the Generator is similar to that of 
-              the apprentice and the forger,  
+              In a very general sense, the role of the Generator is similar to that of
+              the apprentice and the forger,
               while the Discriminator plays the role of the Master or connoisseur.
               In a continuous feedback-loop, the Generator creates "fakes" that will be judged by the Discriminator
-              as being "real" or "fake", and both parts improve as time goes on.  
+              as being "real" or "fake", and both parts improve as time goes on.
               Eventually the Generator becomes a "Master" and can create the images on this website.
             </p>
             <p>
               As extremely powerful ML software like StyleGAN are released and become more user-friendly,
-              artists will have new tools with which to understand their craft and create new work.  
+              artists will have new tools with which to understand their craft and create new work.
             </p>
             <p>
               <em>
               Note: I am by no means a machine-learning expert.
-              For those of you who are actually experts in 
+              For those of you who are actually experts in
               the fields of AI and ML, I apologize in advance for poor generalizations and oversimplifications,
               and I hope that you will notify me of any mistakes.  -<a href="http://derekau.net">Derek</a>
               </em>
@@ -75,34 +75,34 @@
         <div class="columns">
           <div class="column">
             <p>
-              <a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA">Computerphile</a> 
+              <a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA">Computerphile</a>
               has a high-level overview of <a href="https://www.youtube.com/watch?v=Sw9r8CL98N0">Generative Adversarial Networks (GANs) here</a>.
             </p>
             <p>
               Perhaps the easiest way to visualize how StyleGAN works is to watch the original video: <a href="https://www.youtube.com/watch?v=kSLJriaOumA">"A Style-Based Generator Architecture for Generative Adversarial Networks"</a>.
             </p>
             <p>
-              <a href="https://www.gwern.net/">Gwern's</a> 
+              <a href="https://www.gwern.net/">Gwern's</a>
               excellent <em><a href="https://www.gwern.net/Faces">Making Anime Faces With StyleGAN</a></em>
               introduces the original research paper,
               <em>"A Style-Based Generator Architecture for Generative Adversarial Networks", Karras et al 2018</em>
-              (<a href="https://arxiv.org/abs/1812.04948">paper</a>, 
-              <a href="https://www.youtube.com/watch?v=kSLJriaOumA">video</a>, 
-              <a href="https://github.com/NVlabs/stylegan">source</a>), 
+              (<a href="https://arxiv.org/abs/1812.04948">paper</a>,
+              <a href="https://www.youtube.com/watch?v=kSLJriaOumA">video</a>,
+              <a href="https://github.com/NVlabs/stylegan">source</a>),
               and explains in detail the procedure to install and run the <a href="https://github.com/NVlabs/stylegan/">StyleGAN</a> software.
             </p>
             <p>
-              Beginning in February of 2019 with Phillip Wang's 
+              Beginning in February of 2019 with Phillip Wang's
               <a href="http://thispersondoesnotexist.com">This Person Does Not Exist</a>,
               a number of websites sprouted up to showcase the power of StyleGAN trained on
-              various image datasets:  <a href="http://thesecatsdonotexist.com/">cats</a>, 
-              <a href="https://www.thiswaifudoesnotexist.net/">anime characters</a>, 
-              <a href="https://thisrentaldoesnotexist.com/">Airbnb rooms</a>, 
+              various image datasets:  <a href="http://thesecatsdonotexist.com/">cats</a>,
+              <a href="https://www.thiswaifudoesnotexist.net/">anime characters</a>,
+              <a href="https://thisrentaldoesnotexist.com/">Airbnb rooms</a>,
               etc.
             </p>
           </div>
           <div class="column is-two-fifths">
-            <a href="https://www.youtube.com/watch?v=kSLJriaOumA">        
+            <a href="https://www.youtube.com/watch?v=kSLJriaOumA">
               <figure class="image">
                 <img src="/img/v1/stylegan.jpg" alt="">
                 <figcaption>
@@ -110,7 +110,7 @@
                 </figcaption>
               </figure>
             </a>
-            <a href="https://www.youtube.com/watch?v=kSLJriaOumA">        
+            <a href="https://www.youtube.com/watch?v=kSLJriaOumA">
               <figure class="image">
                 <img src="/img/v1/stylegan2.jpg" alt="">
                 <figcaption>
@@ -131,21 +131,21 @@
         <p>
           <a href="https://github.com/NVlabs/stylegan/">StyleGAN</a> requires relatively large datasets of images.
           Datasets are usually comprised of images of the same "thing"- human faces, cars, bedrooms, cats, anime characters, etc.
-          (The <a href="https://arxiv.org/abs/1812.04948">original Stylegan paper</a> used a dataset of 70,000 
+          (The <a href="https://arxiv.org/abs/1812.04948">original Stylegan paper</a> used a dataset of 70,000
           <a href="https://github.com/NVlabs/ffhq-dataset">high-quality images of human faces</a>.)
         </p>
         <p>
           I focused on a single form, the <em>"vase"</em>, in order to keep the dataset relatively simple.
-          Including all types  of "vessels"- cups, bowls, dishes, etc.- would have resutled in 
+          Including all types  of "vessels"- cups, bowls, dishes, etc.- would have resutled in
           far too much variation, especially if I wanted to keep the dataset less than a few
           tens of thousands of images in size.
-          Vases also have an advantage in that they are usually photographed 
+          Vases also have an advantage in that they are usually photographed
           from the same angle (from the front and slightly elevated).
         </p>
         <p>
           Having said that, there is a <em>huge</em> amount of variation even within vases.
           I could have limited the dataset even further by including only <em>ceramic</em>
-          vases, however I'm very interested in seeing the cross-pollination between vases 
+          vases, however I'm very interested in seeing the cross-pollination between vases
           of different materials- porcelain, glass, wood, metal, etc.
           (For an excellent example of the influence of various craft traditions upon one another, see the
           <a href="http://www.sothebys.com/en/auctions/2008/masterpieces-of-chinese-precious-metalwork-early-gold-and-silver-early-chinese-white-green-and-black-wares-l08211.html">Masterpieces of Chinese Precious Metalwork, Early Gold and Silver; Early Chinese White, Green and Black Wares</a>
@@ -175,9 +175,9 @@
         </div>
         <p>
           I was worried of having too small of a dataset and the possibility that the StyleGAN
-          software might just end up memorizing the whole thing.  
+          software might just end up memorizing the whole thing.
           So I ended up scraping a variety of websites until I had around 50k images.
-          I bypassed Google Images for a number of reasons: 
+          I bypassed Google Images for a number of reasons:
           <ul>
             <li>
           images of "vases" are too varied, many are filled with flowers or have complicated backgrounds,
@@ -188,18 +188,18 @@
           and breaks down after the first 100 when doing more complicated domain-based searches,
             </li>
             <li>
-          I couldn't guarantee I wasn't just downloading a lot of duplicate images on each 
+          I couldn't guarantee I wasn't just downloading a lot of duplicate images on each
           variation of my search parameters.
             </li>
           </ul>
         </p>
         <p>
-          Using Flickr as a source had the same issues and Google Images.  
+          Using Flickr as a source had the same issues and Google Images.
           So instead I focused on museums and auction houses, where I could download entire
           image sets for "vases" and be assured of high-quality images shot against a simple backgrounds.
-          Because each site is quite different, 
+          Because each site is quite different,
           I resorted to a variety of scraping tools, from home-grown shell, Python and PHP scripts to more
-          powerful tools like <a href="https://scrapy.org/">Scrapy</a>.        
+          powerful tools like <a href="https://scrapy.org/">Scrapy</a>.
           The output of all of my scripts is simply dumping image URL's to text files.
           Then, a set of shell scripts iterates through each URL:
         </p>
@@ -209,7 +209,7 @@
           </li>
           <li>
             Use ImageMagick convert to resize the image to exact dimensions of 1024 x 1024,
-            fill in unused space with white canvas, 
+            fill in unused space with white canvas,
             adjust image DPI, colorspace, and quality (can be lower than 90 to save space).
             <br/>
             <code>
@@ -260,55 +260,55 @@
           <a href="https://www.si.edu">The Smithsonian</a>,
           <a href="https://www.sothebys.com/en/">Sotheby's</a>,
           <a href="https://www.vam.ac.uk/">Victoria and Albert Museum</a>,
-          <a href="https://www.woolleyandwallis.co.uk/">Woolley & Wallis</a>, and 
+          <a href="https://www.woolleyandwallis.co.uk/">Woolley & Wallis</a>, and
           <a href="https://www.wright20.com/">Wright</a>.
         </p>
         <p>
-          The final, edited dataset is approximately 38,000 high-quality images.  
+          The final, edited dataset is approximately 38,000 high-quality images.
           However, due to the amount of variation in vases, I think it would be better to use a larger
           dataset of perhaps 100k images.
           Unfortunately I couldn't think of any more museums and auction houses with large collections.
           If you are aware of other sources for high-quality images of vases (or even other vessels),
-          please <a href="http://derekau.net/about/">contact me</a>. 
+          please <a href="http://derekau.net/about/">contact me</a>.
         </p>
       </div>
 
       <h5 class="title is-5">Running StyleGAN</h5>
       <div class="content">
         <p>
-          I ended up running StylGAN multiple times- first at 512x512px 
-          just to test the system, then at 1024x1024px.  
+          I ended up running StylGAN multiple times- first at 512x512px
+          just to test the system, then at 1024x1024px.
           As noted in gwern's guide, perhaps the most important and time-consuming part of the
-          process is obtaining a large, high-quality, clean dataset.  Due to various issues and 
+          process is obtaining a large, high-quality, clean dataset.  Due to various issues and
           overlooked complications with the data, I ended up having to completely re-run the
-          1024px model after manually combing through the images and removing as much junk as 
+          1024px model after manually combing through the images and removing as much junk as
           I could.
         </p>
         <p>
           I initially ran StyleGAN on an 8 vCPU, 30GB RAM
           <a href="https://jupyter.org/">Jupyter Notebook</a> (CUDA 10.0)
-          instance 
-          with a single NVIDIA Tesla P100 
+          instance
+          with a single NVIDIA Tesla P100
           hosted on
           <a href="https://cloud.google.com/products/ai/">Google Cloud's AI Platform</a>.
           Once the resolution reached 1024x1024 and iterations started taking more time
-          (approximately 2 hours between ticks), I stopped the VM and reconfigured it to 
+          (approximately 2 hours between ticks), I stopped the VM and reconfigured it to
           use dual NVIDIA Tesla P100 GPU's.  This configuration costs more but effectively
           halves the amount of time needed.
         </p>
         <p>
-          Before following the StyleGAN guide at 
+          Before following the StyleGAN guide at
           <a href="https://www.gwern.net/Faces">Making Anime Faces With StyleGAN</a>,
           I needed to upgrade Python to version 3.6.x (required for StyleGAN).
         </p>
         <p>
           As discussed in the post <a href="https://www.chrisplaysgames.com/gadgets/2019/02/26/training-at-home-and-in-the-cloud/">Training at Home, and in the Cloud</a>,
           training a StyleGAN model from scratch is time-consuming and expensive.
-          Once I reached 9000 kimg, I was reaching my budget limit and still needed 
+          Once I reached 9000 kimg, I was reaching my budget limit and still needed
           enough computation time to generate samples.
           Also, from 8500-9000 kimg I noticed that progress had drastically slowed,
-          and I was getting the "elephant wrinkles" that gwern describes.  Rather than 
-          keep going, I hope to acquire a larger, cleaner dataset at a later date and try again.      
+          and I was getting the "elephant wrinkles" that gwern describes.  Rather than
+          keep going, I hope to acquire a larger, cleaner dataset at a later date and try again.
         </p>
         <p>
           For those of you who want to try generating samples or transfer learning, the resulting model
@@ -317,7 +317,7 @@
         </p>
         <p>
           I'm not sure how to share the actual collection of originals due to copyright and size issues.
-          The unique .tfrecord format datasets generated from the original images to be used by StyleGAN is 
+          The unique .tfrecord format datasets generated from the original images to be used by StyleGAN is
           over 150G in size.
         </p>
       </div>
@@ -332,15 +332,15 @@
         </p>
         <div class="columns">
           <div class="column">
-            <ModalImage 
+            <ModalImage
               imgUrl="/img/v1/trunc1.jpg"
-              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1" 
+              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1"
               />
           </div>
           <div class="column">
-            <ModalImage 
+            <ModalImage
               imgUrl="/img/v1/trunc2.jpg"
-              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1" 
+              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1"
               />
           </div>
         </div>
@@ -350,12 +350,12 @@
       <div class="content">
         <p>
           Interested to see the effect of using a more limited dataset to train the model,
-          I created a new collection of images that only included Chinese Blue & White 
-          (<em>qinghua</em>) vessels.  
+          I created a new collection of images that only included Chinese Blue & White
+          (<em>qinghua</em>) vessels.
           (It's possible that some Dutch Delftware and Japanese Arita-ware snuck in.)
           This new set was much smaller, only around 2,800 images.
-          Using <em>transfer learning</em>, I started the 
-          StyleGAN software with the original vessels .pkl model 
+          Using <em>transfer learning</em>, I started the
+          StyleGAN software with the original vessels .pkl model
           (<a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/network-snapshot-008980.pkl">network-snapshot-008980.pkl</a>)
           and trained against the new, limited dataset of only Blue & White.
           After just one round of training I was already getting very good results,
@@ -367,18 +367,18 @@
           The Blue & White model at 8980 iterations is here:
           <a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/network-snapshot-009180.pkl">network-snapshot-009180.pkl</a>
         </p>
-        
+
         <div class="columns">
           <div class="column">
-            <ModalImage 
+            <ModalImage
               imgUrl="/img/v1/qhtrunc1.jpg"
-              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1" 
+              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1"
               />
           </div>
           <div class="column">
-            <ModalImage 
+            <ModalImage
               imgUrl="/img/v1/qhtrunc2.jpg"
-              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1" 
+              caption="𝜓 range: 1, 0.8, 0.6, 0.4, 0.2, 0, -0.2, -0.4, -0.6, -0.8, -1"
               />
           </div>
         </div>
@@ -392,20 +392,20 @@
           While most of the images on this website have 𝜓 set to 0.6 (which gives reasonable if boring results),
           more diverse and distorted images can be generated with 𝜓 at higher numbers.  The "Diverse" section
           of this website showcases images generated with 𝜓 set at either 1.0 or 1.2.
-          Although there are more artifacts and unrealistic-looking results, many of the images are 
+          Although there are more artifacts and unrealistic-looking results, many of the images are
           more interesting for their artistic possibilities and unusual combination of influences.
-          At times these more diverse images achieve a nostalgic, dreamlike, and painterly quality 
+          At times these more diverse images achieve a nostalgic, dreamlike, and painterly quality
           that I find very interesting.
         </p>
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v1/diverse1.jpg"
-          caption="Some favorite results from the diverse set." 
+          caption="Some favorite results from the diverse set."
           />
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v1/diverse2.jpg"
-          caption="Some favorite results from the diverse qinghua set." 
+          caption="Some favorite results from the diverse qinghua set."
           />
 
       </div>
@@ -423,7 +423,7 @@
               <em><a href="https://arxiv.org/abs/1912.04958">"Analyzing and Improving the Image Quality of StyleGAN"</a></em>.
             </p>
             <p>
-              Excellent article about running StyleGAN2 by Zalando Dublin here: 
+              Excellent article about running StyleGAN2 by Zalando Dublin here:
               <em><a href="https://towardsdatascience.com/stylegan-v2-notes-on-training-and-latent-space-exploration-e51cf96584b3">StyleGAN v2: notes on training and latent space exploration</a></em>
             </p>
           </div>
@@ -438,8 +438,8 @@
           Out of curiosity and as a test run of StyleGAN2, I created a dataset of about 15,000 public images from <a href="https://glazy.org">Glazy</a>
           I manually removed a number of images that included hands & fingers, complex background elements, and other disqualifying characteristics.
           However, the remaining images still included a wide variation of not only colors and surfaces, but also shapes of glaze test tiles.
-          I used ImageMagick convert to precisely resize the images to 512x512 pixels in dimension, 
-          then used identify to verify that all images were in the correct sRGB colorspace. 
+          I used ImageMagick convert to precisely resize the images to 512x512 pixels in dimension,
+          then used identify to verify that all images were in the correct sRGB colorspace.
           Finally I ran StyleGAN2's dataset_tool.py to create the multi-resolution datasets.
         </p>
         <p>
@@ -455,15 +455,15 @@
           </code>
         </p>
         <p>
-          Given this poor dataset, I was not optimistic.  
+          Given this poor dataset, I was not optimistic.
           But after only a few hundred iterations the results were already very promising.
           At around 800 kimg the images were already good enough as a proof of concept,
           and I stopped training.
         </p>
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v2/glazes.jpg"
-          caption="Curated images with 𝜓 1.0 generated using the network trained for 782 iterations against the Glazy glaze test dataset." 
+          caption="Curated images with 𝜓 1.0 generated using the network trained for 782 iterations against the Glazy glaze test dataset."
           />
 
       </div>
@@ -484,14 +484,14 @@
         <p>
         </p>
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v2/earlyiteration.jpg"
-          caption="Generated images from an early model after only 120 iterations." 
+          caption="Generated images from an early model after only 120 iterations."
           />
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v2/stylemix.jpg"
-          caption="Mixing styles with the StyleGAN2 10000Kimg model." 
+          caption="Mixing styles with the StyleGAN2 10000Kimg model."
           />
 
       </div>
@@ -500,14 +500,14 @@
       <h5 class="title is-5">Transfer Learning</h5>
 
       <div class="content">
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v2/greek-0.8.jpg"
-          caption="Greek vessels dataset of ~2,000 images trained for 120 Kimg against the 10,000 Kimg vases model." 
+          caption="Greek vessels dataset of ~2,000 images trained for 120 Kimg against the 10,000 Kimg vases model."
           />
 
         <p>
-          To test transfer learning against my new StyleGAN2 model, I looked for a dataset with 
-          similar symmetry and color range as the vases dataset.  I happened upon 
+          To test transfer learning against my new StyleGAN2 model, I looked for a dataset with
+          similar symmetry and color range as the vases dataset.  I happened upon
           <a href="https://twitter.com/karim_douieb/status/1229903297378766854">this tweet by Karim Douïeb</a>
           which led me to a beautiful set of photos which were perfectly suited for my purpose,
           <a href="https://www.flickr.com/photos/coleoptera-us/albums/72157607363771409">"Beetles of the World" by Udo Schmidt</a>.
@@ -515,23 +515,23 @@
         </p>
 
         <p>
-          After just training 60 Kimg using the vases 10,000 Kimg model, StyleGAN2 was already producing beautiful 
+          After just training 60 Kimg using the vases 10,000 Kimg model, StyleGAN2 was already producing beautiful
           beetles.  After 180 Kimg the results were so good that I just stopped training.
         </p>
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v2/beetles_fakes010060.jpg"
-          caption="Beetles dataset of ~4000 images trained for only 60 Kimg against the 10,000 Kimg vases model." 
+          caption="Beetles dataset of ~4000 images trained for only 60 Kimg against the 10,000 Kimg vases model."
           />
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v2/beetles_fakes010180.jpg"
-          caption="Same Beetles dataset after training for 180 Kimg." 
+          caption="Same Beetles dataset after training for 180 Kimg."
           />
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v2/010180_psi0.8_samples.jpg"
-          caption="Selected beetle samples at 180 Kimg, 𝜓 0.8" 
+          caption="Selected beetle samples at 180 Kimg, 𝜓 0.8"
           />
 
       </div>
@@ -550,9 +550,9 @@
         <p>
         </p>
 
-        <ModalImage 
+        <ModalImage
           imgUrl="/img/v2/beetlevases.jpg"
-          caption="Beetle/Vase hybrids created using transfer learning.  60 Kimg, 𝜓 1.2" 
+          caption="Beetle/Vase hybrids created using transfer learning.  60 Kimg, 𝜓 1.2"
           />
 
       </div>
@@ -566,7 +566,7 @@
           <p>
             GPT-3 is a huge 175 billion parameter language model from OpenAI that creates responses to short textual inputs.
             To learn more about GPT-3, see <a href="https://www.gwern.net/GPT-3">gwern's article here</a>.
-            I'm still waiting to get access to <a href="https://beta.openai.com/">OpenAI's GPT-3 API</a>. 
+            I'm still waiting to get access to <a href="https://beta.openai.com/">OpenAI's GPT-3 API</a>.
             In the meantime, I've been accessing the model via
             <a href="https://play.aidungeon.io/">AI Dungeon's</a> amazing text adventure game.
             (It's kind of like an endless "Choose Your Own Adventure" book, with various genres like Cyberpunk and Fantasy.)
@@ -622,7 +622,7 @@
             </p>
             <p>
               "These are not pots I shape. The pots themselves are incidental. I am giving life to the inanimate, and that is a magic not to be undertaken lightly. It is a holy art.
-            </p>  
+            </p>
           </div>
 
           <h5 class="title is-5 mt-4">Story #3</h5>
@@ -661,36 +661,36 @@
       <div class="container">
         <div class="content">
           <p>
-            After prompting the GPT-3 with real quotes by famous artists like <em>"Art is a line around your thoughts"</em> (Gustav Klimt) 
-            and <em>"To be an artist is to believe in life"</em> (Henry Moore), GPT-3 responded with a wide range of its own quotes.  
-            A small percentage of the generated quotes were plagiarised 
-            (<em>"We don’t make mistakes, just happy little accidents."</em> – Bob Ross).  
+            After prompting the GPT-3 with real quotes by famous artists like <em>"Art is a line around your thoughts"</em> (Gustav Klimt)
+            and <em>"To be an artist is to believe in life"</em> (Henry Moore), GPT-3 responded with a wide range of its own quotes.
+            A small percentage of the generated quotes were plagiarised
+            (<em>"We don’t make mistakes, just happy little accidents."</em> – Bob Ross).
             Most of the quotes were trite cliches like <em>"A picture speaks more than words ever can."</em>
           </p>
           <p>
-            Out of about 40 responses, here are three of the more interesting quotes.  
-            I have attempted to verify they are not plagiarized by searching Google for 
+            Out of about 40 responses, here are three of the more interesting quotes.
+            I have attempted to verify they are not plagiarized by searching Google for
             the entire quotes as well as sentence fragments.
           </p>
           <div class="columns">
             <div class="column">
-              <ModalImage 
+              <ModalImage
                 imgUrl="/img/quotes/20200731-GPT3-quotes-1.jpg"
-                caption="GPT-3 Generated Inspirational Art Quote" 
+                caption="GPT-3 Generated Inspirational Art Quote"
                 />
             </div>
             <div class="column">
-              <ModalImage 
+              <ModalImage
                 imgUrl="/img/quotes/20200731-GPT3-quotes-2.jpg"
-                caption="GPT-3 Generated Inspirational Art Quote" 
+                caption="GPT-3 Generated Inspirational Art Quote"
                 />
             </div>
           </div>
           <div class="columns">
             <div class="column">
-              <ModalImage 
+              <ModalImage
                 imgUrl="/img/quotes/20200731-GPT3-quotes-3.jpg"
-                caption="GPT-3 Generated Inspirational Art Quote" 
+                caption="GPT-3 Generated Inspirational Art Quote"
                 />
             </div>
             <div class="column">
@@ -707,11 +707,11 @@
             for generating fake quotes and received some more interesting responses.
           </p>
           <p>
-            Some of these quotes are partial plagiarisms or based on patterns found in real quotes.  
-            For example "Art is the objectification of feeling" is attributed to Herman Melville, 
-            while "Art is the objectification of feeling, and the subjectification of nature" 
-            is attributed to Susanne Langer.  
-            GPT-3 came up with its own version:  
+            Some of these quotes are partial plagiarisms or based on patterns found in real quotes.
+            For example "Art is the objectification of feeling" is attributed to Herman Melville,
+            while "Art is the objectification of feeling, and the subjectification of nature"
+            is attributed to Susanne Langer.
+            GPT-3 came up with its own version:
             "Art is the objectification of imagination seen through the eyes of empathy."
           </p>
           <p>
@@ -720,7 +720,7 @@
           </p>
         </div>
         <div class="mb-4">
-          <RandomGallery 
+          <RandomGallery
             fileExtension='jpg'
             imgBaseUrl='/img/gpt-3-quotes/'
             :idLength=2
@@ -742,9 +742,9 @@
             It was more difficult to get relevant responses prompting the OpenAI API
             for poetry related to pottery.  But asking for haikus resulted in some interesting results.
           </p>
-          <ModalImage 
+          <ModalImage
             imgUrl="/img/gpt-3-quotes/haiku_long.jpg"
-            caption="Curated examples of haikus on the subject of pottery." 
+            caption="Curated examples of haikus on the subject of pottery."
             />
         </div>
       </div>
@@ -756,7 +756,7 @@
         <div class="content">
           <p>
             GPT-3 generated some amazing artist statements, although upon reflection many of them
-            don't actually make sense.  Or is it that even <i>real</i> Artist Statements don't make 
+            don't actually make sense.  Or is it that even <i>real</i> Artist Statements don't make
             sense?
           </p>
           View here: <router-link class="has-text-weight-bold" :to="{ name: 'statements' }">Artist Statements</router-link>
@@ -793,7 +793,7 @@ INGREDIENT: 1.4000	Red Iron Oxide</pre>
           </p>
           <p>
             I generated two sets of recipes, one with GPT-2 temperature set at 0.7 and one at 0.9.  The results for both
-            sets were surprisingly good:  At first glance the recipes seemed "real" with proportional mixes of feldspars, 
+            sets were surprisingly good:  At first glance the recipes seemed "real" with proportional mixes of feldspars,
             clays, silica, fluxes and colorants/opacifiers.  Even the total ingredient amounts added up to a reasonable
             number, usually in the range of 90-110%.  The duplication rate was about 5% for t=0.7 and 4.5% for t=0.9.
           </p>
@@ -852,16 +852,16 @@ Craters
             these generated recipes fell comfortably within the major Stull regions of Bright, Matte, and Semi-Matte.
             The set with temperature setting of 0.9 generated more variation.
           </p>
-          <ModalImage 
+          <ModalImage
             imgUrl="/img/gpt-2/StullCharts.jpg"
-            caption="Generated recipes displayed in the Stull Chart." 
+            caption="Generated recipes displayed in the Stull Chart."
             />
           <p>
             Training against a subset of recipes, using only the cone 6 glazes, gave results with lower Silica and Alumina, as well as higher Boron.
           </p>
-          <ModalImage 
+          <ModalImage
             imgUrl="/img/gpt-2/StullChartsCone6.jpg"
-            caption="Cone 6 generated recipes showing lower Silica & Alumina as well as higher levels of boron." 
+            caption="Cone 6 generated recipes showing lower Silica & Alumina as well as higher levels of boron."
             />
           <p>
             The obvious next step was to fire some of these "fake" recipes and create real glazes.
@@ -873,9 +873,9 @@ Craters
             <br/>
             <a href="https://glazy.org/recipes/111070">GPT-2 Three's Company</a>
           </p>
-          <ModalImage 
+          <ModalImage
             imgUrl="/img/gpt-2/tests.jpg"
-            caption="Selected generated recipes fired at Orton cone 6 in Oxidation." 
+            caption="Selected generated recipes fired at Orton cone 6 in Oxidation."
             />
           <p>
             Using <a href="https://github.com/derekphilipau/glazy-data">Glazy's public data (https://github.com/derekphilipau/glazy-data)</a>
@@ -936,8 +936,36 @@ CONE: 6
 SiO2: 44.64, Al2O3: 12.17, B2O3: 3.06, K2O: 0.07, Na2O: 4.76, MgO: 3.96, CaO: 7.55, P2O5: 2.08, Fe2O3: 8.72, TiO2: 0.06</pre>
           </p>
           <p>
-            Downloads: 
+            Downloads:
             <a href="https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/gpt-2/gpt2_analyses3_0.9_20201213_082842.txt">Generated "fake" analyses</a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h4 class="title is-4">StyleGAN 3, October 2021</h4>
+      <div class="container">
+        <div class="content">
+          <div class="is-flex is-align-content-center is-justify-content-center mb-4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/GdhhOZmPFvM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p>
+            Here, the Generative Adversarial Network StyleGAN3 is beginning to train with a dataset of tens of
+            thousands of images of vases.  Generated music soundtrack is an excerpt from "Transmission" by
+            the amazing <a href="https://alexbainter.com/">Alex Bainter (https://alexbainter.com/)</a> and is licensed under CC BY 4.0.
+            More generators can be found at <a href="https://generative.fm">https://generative.fm</a>
+          </p>
+          <p>
+          </p>
+          <div class="is-flex is-align-content-center is-justify-content-center mb-4">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0PlV3JrB5QA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          </div>
+          <p>
+            Here, the Generative Adversarial Network StyleGAN3 is continuing to train with a dataset of tens of
+            thousands of images of vases.  Generated music soundtrack is an excerpt from "Transmission" by the
+            amazing <a href="https://alexbainter.com/">Alex Bainter (https://alexbainter.com/)</a> and is licensed under CC BY 4.0.
+            More generators can be found at <a href="https://generative.fm">https://generative.fm</a>
           </p>
         </div>
       </div>
@@ -948,27 +976,27 @@ SiO2: 44.64, Al2O3: 12.17, B2O3: 3.06, K2O: 0.07, Na2O: 4.76, MgO: 3.96, CaO: 7.
       <div class="content">
         <p>
           The website itself is a <a href="https://vuejs.org/">Vue.js</a> Single-Page Application (SPA)
-          initialized with 
+          initialized with
           <a href="https://cli.vuejs.org/">Vue CLI</a> using <a href="https://router.vuejs.org/">Vue Router</a>
-          with <a href="https://bulma.io/">Bulma</a> providing a light but fully-functional CSS framework.  
-          Infinite loading provided by the <a href="https://github.com/PeachScript/vue-infinite-loading">vue-infinite-loading</a> component.     
-          Image IPTC metadata is read using <a href="https://github.com/exif-js/exif-js">exif-js</a>. 
+          with <a href="https://bulma.io/">Bulma</a> providing a light but fully-functional CSS framework.
+          Infinite loading provided by the <a href="https://github.com/PeachScript/vue-infinite-loading">vue-infinite-loading</a> component.
+          Image IPTC metadata is read using <a href="https://github.com/exif-js/exif-js">exif-js</a>.
           The statically-generated site files are hosted on  <a href="https://pages.github.com/">Github Pages</a>.
           (Because I'm using Github Pages, I've enabled vue-router's hash mode rather than the more elegant
           <a href="https://router.vuejs.org/guide/essentials/history-mode.html">history mode</a>.)
         </p>
         <p>
-          Rather than bear the cost of an expensive GPU-powered server to 
+          Rather than bear the cost of an expensive GPU-powered server to
           dynamically generate sampled images, like other "This X does not exist" sites I simply
           statically generated a number of images (40,000) and store the image files
           in Amazon S3.  After playing around with different StyleGAN settings, I ended up
           using the same setting as gwern for the hyperparameter 𝜓, 0.6.
         </p>
         <p>
-          The set of 38,700 "Original" images used for training as well as the 40,000 "Fake" generated images are 
-          stored in <a href="https://aws.amazon.com/s3/">Amazon S3 buckets</a> 
+          The set of 38,700 "Original" images used for training as well as the 40,000 "Fake" generated images are
+          stored in <a href="https://aws.amazon.com/s3/">Amazon S3 buckets</a>
           with filenames comprised of zero-padded, consecutive ID's (e.g. "0000001.jpg", "0000002.jpg", "0000003.jpg", etc.).
-          To generate the randomized galleries, 
+          To generate the randomized galleries,
           the Vue gallery component simply selects from an array of randomized image ID's (from 1 to the maximum).
         </p>
         <p>
@@ -993,7 +1021,7 @@ SiO2: 44.64, Al2O3: 12.17, B2O3: 3.06, K2O: 0.07, Na2O: 4.76, MgO: 3.96, CaO: 7.
           </li>
           <li>
             Explore Generator "Styles" with filters and develop a tool that allows artists to explore form.
-            For example,  create a Blue & White vase in Glass?  Explore how mixing various materials & 
+            For example,  create a Blue & White vase in Glass?  Explore how mixing various materials &
             techniques can lead to new creative possibilities.  Attempt crossbreeding with different models.
           </li>
           <li>
@@ -1017,7 +1045,7 @@ SiO2: 44.64, Al2O3: 12.17, B2O3: 3.06, K2O: 0.07, Na2O: 4.76, MgO: 3.96, CaO: 7.
           Creating the datasets and running the servers for this project costs weeks of time and hundreds of dollars in server fees.
           Further exploration (see "Next Steps") will require even more investment.
           To continue supporting this website as well as my other projects like
-          <a href="https://glazy.org">Glazy</a>, the <a href="https://wiki.glazy.org">GLazy Wiki</a>, <a href="http://72hands.org/">72 Hands</a>, and others, 
+          <a href="https://glazy.org">Glazy</a>, the <a href="https://wiki.glazy.org">GLazy Wiki</a>, <a href="http://72hands.org/">72 Hands</a>, and others,
           please consider donating via
           <a href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=VN8HBLPQG6N3E&currency_code=USD&source=url">
               Paypal

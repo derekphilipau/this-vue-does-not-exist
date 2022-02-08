@@ -1,11 +1,11 @@
 <template>
   <div class="originals">
-    <RandomGallery 
+    <RandomGallery
       fileExtension='jpg'
       imgBaseUrl='https://thisvesseldoesnotexist.s3-us-west-2.amazonaws.com/public/v2/originals/'
       :idLength=7
       :minId=1
-      :maxId=10000
+      :maxId=5000
       :pageSize=20
       />
   </div>
